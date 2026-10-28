@@ -11,10 +11,13 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/omoresearch/omo-microduck"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/media/btn-star-dark.png"><img src="docs/media/btn-star.png" alt="Star on GitHub" height="43"></picture></a>&nbsp;
   <a href="https://github.com/omoresearch/omo-microduck/releases/latest"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/media/btn-download-dark.png"><img src="docs/media/btn-download.png" alt="Download v1.0.0" height="43"></picture></a>&nbsp;
-  <a href="#straight-from-the-stream"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/media/btn-reels-dark.png"><img src="docs/media/btn-reels.png" alt="Watch the reels" height="43"></picture></a>&nbsp;
-  <a href="#quick-start"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/media/btn-start-dark.png"><img src="docs/media/btn-start.png" alt="Quick start" height="43"></picture></a>&nbsp;
-  <a href="https://www.omo.sh"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/media/btn-omo-dark.png"><img src="docs/media/btn-omo.png" alt="omo.sh" height="43"></picture></a>
+  <a href="#straight-from-the-stream"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/media/btn-reels-dark.png"><img src="docs/media/btn-reels.png" alt="Watch the reels" height="43"></picture></a>
+</p>
+
+<p align="center">
+  <sub>⭐ <b>Star the repo to follow the flock.</b> &nbsp;·&nbsp; <a href="#quick-start">Quick start</a> &nbsp;·&nbsp; <a href="#how-it-works">How it works</a> &nbsp;·&nbsp; <a href="https://www.omo.sh">omo.sh</a></sub>
 </p>
 
 <p align="center">
@@ -261,6 +264,18 @@ The community brains are by their Hugging Face authors. Full list in
 
 **NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR
 MICROSOFT.** Not affiliated with Pollen Robotics.
+
+<br>
+
+<p align="center">
+  <a href="https://github.com/omoresearch/omo-microduck"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/media/btn-star-dark.png"><img src="docs/media/btn-star.png" alt="Star Omo Microduck on GitHub" height="43"></picture></a>
+</p>
+<p align="center">
+  <a href="https://github.com/omoresearch/omo-microduck/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/omoresearch/omo-microduck?style=for-the-badge&logo=github&label=Star&color=1a1008&labelColor=4a3b2f"></a>
+  <br><sub>⭐ Star the repo to follow the flock.</sub>
+</p>
+
+<br>
 
 <p align="center">
   <a href="https://www.omo.sh"><img src="docs/media/omo-icon.png" width="56" alt="Omo Research"></a>

@@ -20,14 +20,23 @@ H, R, PADX = 86, 16, 52
 
 # name, glyph, label, primary?
 BUTTONS = [
+    ("star", "star", "Star on GitHub", True),
     ("download", "dl", "Download v1.0.0", True),
     ("reels", "play", "Watch the reels", True),
-    ("start", None, "Quick start", False),
-    ("omo", None, "omo.sh", False),
 ]
 
 
 def glyph(d, kind, x, cy, col):
+    if kind == "star":
+        import math
+        r1, r2, cx = 14, 6, x + 11
+        pts = []
+        for i in range(10):
+            r = r1 if i % 2 == 0 else r2
+            a = -math.pi / 2 + i * math.pi / 5
+            pts.append((cx + r * math.cos(a), cy + 1 + r * math.sin(a)))
+        d.polygon(pts, fill=col)
+        return 22
     if kind == "play":
         d.polygon([(x, cy - 12), (x, cy + 12), (x + 21, cy)], fill=col)
         return 21
@@ -54,7 +63,7 @@ def render(name, kind, label, primary, theme):
     d.rounded_rectangle((1, 1, w - 2, H - 2), radius=R, fill=fill, outline=edge, width=3)
     x = PADX
     if kind:
-        glyph(d, kind, x, H // 2, ORANGE if kind == "play" else fg)
+        glyph(d, kind, x, H // 2, ORANGE if kind in ("play", "star") else fg)
         x += gw
     d.text((x, H // 2), label, font=f, fill=fg, anchor="lm")
     out = HERE / f"btn-{name}{'' if theme == 'light' else '-dark'}.png"
