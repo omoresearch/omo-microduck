@@ -40,6 +40,29 @@
 </tr>
 </table>
 
+## In the game
+
+<p align="center">
+  <a href="https://github.com/omoresearch/omo-microduck/releases/download/v1.0.0/omo-microduck-in-game.mp4"><img src="docs/media/duck-in-game.webp" alt="Recorded in Minecraft: the Microduck hops, does a forward roll, and a flock of six ducks walks toward the camera in the Omo Space duck lab" width="100%"></a>
+</p>
+
+<table>
+<tr>
+<td width="33%"><img src="docs/media/ingame-hero.jpg" alt="Quackers standing in the duck lab, eye-level close-up"></td>
+<td width="33%"><img src="docs/media/ingame-roll.jpg" alt="Mid forward roll (Pollen's roulade policy)"></td>
+<td width="33%"><img src="docs/media/ingame-flock.jpg" alt="Six ducks walking toward the camera"></td>
+</tr>
+</table>
+
+<p align="center">
+  <a href="https://github.com/omoresearch/omo-microduck/releases/download/v1.0.0/omo-microduck-in-game.mp4"><b>▶ Watch the 55-second in-game film</b></a> (1080p, release asset)
+</p>
+
+<sub>Recorded inside Minecraft 26.2 (Fabric, Iris + Complementary Reimagined shaders) in the Omo Space duck lab.
+The camera path is scripted; the duck is not. Every step, hop and roll is the policy driving live MuJoCo physics,
+drawn by this mod. Captured at ⅓ wall-clock speed on a busy machine (sim clock and game tick slowed together,
+physics timestep unchanged) and retimed to real speed. Quackers' line in the film is an on-screen caption.</sub>
+
 ## Why this exists
 
 Most game companions are puppets: hand-made animations that play when a script
