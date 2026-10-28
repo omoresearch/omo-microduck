@@ -1,0 +1,12 @@
+# build outputs
+mod/build/
+mod/deps/*.jar
+# sidecar runtime
+sidecar/.venv/
+sidecar/upstream/
+sidecar/model_cache.json
+sidecar/ducks.json
+sidecar/brains/*/
+__pycache__/
+*.pyc
+*.part

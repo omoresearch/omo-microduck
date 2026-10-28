@@ -1,0 +1,5834 @@
+{
+ "version": 1,
+ "generated": "2026-10-28T02:23:31+1100",
+ "note": "written by brains.py eval; runtime offers status pass/wobbly only",
+ "brains": [
+  {
+   "id": "bow",
+   "repo": "neil-jo/microduck-polite-bow",
+   "file": "policy.onnx",
+   "dir": "neil-jo__microduck-polite-bow",
+   "kind": "episodic",
+   "category": "trick",
+   "variant": "default",
+   "duration_s": 4.0,
+   "action_scale": 1.0,
+   "vx": 0.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 0,
+   "recurrent": false,
+   "expect": "bow",
+   "featured": false,
+   "travel_m": null,
+   "name": "polite-bow",
+   "description": "neil-jo's polite bow",
+   "manifest_description": "Bows from a two-foot stand and comes back up.",
+   "author": "neil-jo",
+   "license": "unspecified on the HF card",
+   "hf_sha": "e720dc004536dd3533356d22da64d774053fc368",
+   "status": "pass",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.058,
+      "dx_heading": -0.052,
+      "yaw_change_deg": 11.7,
+      "max_tilt_deg": 14.5,
+      "inverted": false,
+      "min_z": 0.102,
+      "rise": -0.0,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.5,
+       "right": 0.34
+      },
+      "foot_lift": {
+       "left": 0.013,
+       "right": 0.013
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.038,
+      "max_r": 0.06,
+      "end_tilt_deg": 13.2,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.132,
+      "dx_heading": -0.129,
+      "yaw_change_deg": 20.4,
+      "max_tilt_deg": 15.0,
+      "inverted": false,
+      "min_z": 0.101,
+      "rise": -0.0,
+      "max_air_s": 0.02,
+      "foot_speed": {
+       "left": 0.7,
+       "right": 0.61
+      },
+      "foot_lift": {
+       "left": 0.015,
+       "right": 0.016
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.058,
+      "max_r": 0.14,
+      "end_tilt_deg": 13.7,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.091,
+      "dx_heading": -0.088,
+      "yaw_change_deg": 13.5,
+      "max_tilt_deg": 14.8,
+      "inverted": false,
+      "min_z": 0.102,
+      "rise": -0.0,
+      "max_air_s": 0.02,
+      "foot_speed": {
+       "left": 0.55,
+       "right": 0.46
+      },
+      "foot_lift": {
+       "left": 0.013,
+       "right": 0.014
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.052,
+      "max_r": 0.1,
+      "end_tilt_deg": 14.0,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": -0.015
+     }
+    ]
+   },
+   "eval_summary": {
+    "max_tilt_deg": 14.767,
+    "rise_m": 0.0,
+    "air_s": 0.013,
+    "joint_std": 0.049,
+    "dist": 0.094,
+    "upright_after": 3
+   }
+  },
+  {
+   "id": "cartwheel",
+   "repo": "guang384/microduck-side-roll-left",
+   "file": "policy.onnx",
+   "dir": "guang384__microduck-side-roll-left",
+   "kind": "episodic",
+   "category": "trick",
+   "variant": "default",
+   "duration_s": 3.5,
+   "action_scale": 1.0,
+   "vx": 0.0,
+   "cmd": [
+    0.0,
+    -1.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 0,
+   "recurrent": false,
+   "expect": "roll",
+   "featured": true,
+   "travel_m": null,
+   "name": "side-roll-left",
+   "description": "guang384's lateral roll over the shoulder",
+   "manifest_description": "Lateral roll, LEFT shoulder. Same policy as side-roll-right; the daemon feeds idle [0,-1,0] so the two-button policy rolls left. Lands back in the start posture.",
+   "author": "guang384",
+   "license": "unspecified on the HF card",
+   "hf_sha": "bd20f7fa15538cd3081ce8f20b4b7eeaba163af9",
+   "status": "wobbly",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.302,
+      "dx_heading": 0.149,
+      "yaw_change_deg": -67.9,
+      "max_tilt_deg": 167.6,
+      "inverted": true,
+      "min_z": 0.045,
+      "rise": 0.002,
+      "max_air_s": 0.02,
+      "foot_speed": {
+       "left": 1.76,
+       "right": 1.52
+      },
+      "foot_lift": {
+       "left": 0.144,
+       "right": 0.137
+      },
+      "lift_time_s": 0.12,
+      "joint_std": 0.356,
+      "max_r": 0.31,
+      "end_tilt_deg": 0.8,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.286,
+      "dx_heading": 0.126,
+      "yaw_change_deg": -107.9,
+      "max_tilt_deg": 168.2,
+      "inverted": true,
+      "min_z": 0.046,
+      "rise": 0.002,
+      "max_air_s": 0.02,
+      "foot_speed": {
+       "left": 2.19,
+       "right": 1.46
+      },
+      "foot_lift": {
+       "left": 0.14,
+       "right": 0.129
+      },
+      "lift_time_s": 0.2,
+      "joint_std": 0.382,
+      "max_r": 0.29,
+      "end_tilt_deg": 0.8,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.305,
+      "dx_heading": -0.031,
+      "yaw_change_deg": -56.8,
+      "max_tilt_deg": 167.2,
+      "inverted": true,
+      "min_z": 0.046,
+      "rise": 0.002,
+      "max_air_s": 0.02,
+      "foot_speed": {
+       "left": 1.7,
+       "right": 1.58
+      },
+      "foot_lift": {
+       "left": 0.148,
+       "right": 0.136
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.398,
+      "max_r": 0.33,
+      "end_tilt_deg": 123.4,
+      "upright_at_end": false,
+      "falls_after": 1,
+      "upright_after": true,
+      "resets": 0,
+      "clean": false
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": -0.168
+     }
+    ]
+   },
+   "eval_summary": {
+    "max_tilt_deg": 167.667,
+    "rise_m": 0.002,
+    "air_s": 0.02,
+    "joint_std": 0.379,
+    "dist": 0.298,
+    "upright_after": 3
+   }
+  },
+  {
+   "id": "chatter",
+   "repo": "microduckapp/microduck-chatterbox",
+   "file": "policy.onnx",
+   "dir": "microduckapp__microduck-chatterbox",
+   "kind": "episodic",
+   "category": "trick",
+   "variant": "default",
+   "duration_s": 10.65,
+   "action_scale": 1.0,
+   "vx": 0.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 0,
+   "recurrent": true,
+   "expect": "dance",
+   "featured": false,
+   "travel_m": null,
+   "name": "chatterbox",
+   "description": "microduckapp's chatterbox babble (LSTM)",
+   "manifest_description": "Can\u2019t stop babbling: tiny nods, shakes and tilts a mile a minute, like it\u2019s telling you everything at once.",
+   "author": "microduckapp",
+   "license": "unspecified on the HF card",
+   "hf_sha": "6d85ca3edc934f9dce095e9d7504b7d750f3cf59",
+   "status": "pass",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.001,
+      "dx_heading": 0.001,
+      "yaw_change_deg": -1.2,
+      "max_tilt_deg": 3.0,
+      "inverted": false,
+      "min_z": 0.116,
+      "rise": 0.0,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.01,
+       "right": 0.0
+      },
+      "foot_lift": {
+       "left": 0.0,
+       "right": 0.0
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.065,
+      "max_r": 0.01,
+      "end_tilt_deg": 1.8,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.001,
+      "dx_heading": 0.001,
+      "yaw_change_deg": -1.7,
+      "max_tilt_deg": 3.0,
+      "inverted": false,
+      "min_z": 0.116,
+      "rise": 0.0,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.01,
+       "right": 0.0
+      },
+      "foot_lift": {
+       "left": 0.0,
+       "right": 0.0
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.065,
+      "max_r": 0.0,
+      "end_tilt_deg": 1.8,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.001,
+      "dx_heading": 0.001,
+      "yaw_change_deg": -1.4,
+      "max_tilt_deg": 3.0,
+      "inverted": false,
+      "min_z": 0.116,
+      "rise": 0.0,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.01,
+       "right": 0.0
+      },
+      "foot_lift": {
+       "left": 0.0,
+       "right": 0.0
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.065,
+      "max_r": 0.01,
+      "end_tilt_deg": 1.8,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": -0.003
+     }
+    ]
+   },
+   "eval_summary": {
+    "max_tilt_deg": 3.0,
+    "rise_m": 0.0,
+    "air_s": 0.0,
+    "joint_std": 0.065,
+    "dist": 0.001,
+    "upright_after": 3
+   }
+  },
+  {
+   "id": "crouch",
+   "repo": "pollen-robotics/microduck-policies",
+   "file": "roller_crouch.onnx",
+   "dir": "pollen-robotics__microduck-policies__roller_crouch",
+   "kind": "episodic",
+   "category": "trick",
+   "variant": "rollers",
+   "duration_s": 3.5,
+   "action_scale": 0.8,
+   "vx": 0.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": [
+    5.0,
+    0.7
+   ],
+   "jv_lag": 0,
+   "act_delay": 0,
+   "recurrent": false,
+   "expect": "crouch",
+   "featured": false,
+   "travel_m": null,
+   "name": "crouch",
+   "description": "Pollen's roller crouch (on skates)",
+   "manifest_description": "The policy set a microduck ships with: walking, standing, and the one-shots its buttons run.",
+   "author": "pollen-robotics",
+   "license": "apache-2.0",
+   "hf_sha": "665ae4eb20bfe13bca1ef4ea6d4bb6b4a096e448",
+   "status": "pass",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.147,
+      "dx_heading": 0.147,
+      "yaw_change_deg": -2.2,
+      "max_tilt_deg": 10.5,
+      "inverted": false,
+      "min_z": 0.067,
+      "rise": -0.0,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.19,
+       "right": 0.21
+      },
+      "foot_lift": {
+       "left": 0.0,
+       "right": 0.0
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.259,
+      "max_r": 0.21,
+      "upright_at_end": true,
+      "upright_after": true
+     },
+     {
+      "dist": 0.152,
+      "dx_heading": 0.152,
+      "yaw_change_deg": -2.9,
+      "max_tilt_deg": 10.4,
+      "inverted": false,
+      "min_z": 0.067,
+      "rise": -0.0,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.19,
+       "right": 0.2
+      },
+      "foot_lift": {
+       "left": 0.0,
+       "right": 0.0
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.259,
+      "max_r": 0.21,
+      "upright_at_end": true,
+      "upright_after": true
+     },
+     {
+      "dist": 0.148,
+      "dx_heading": 0.148,
+      "yaw_change_deg": -2.7,
+      "max_tilt_deg": 10.4,
+      "inverted": false,
+      "min_z": 0.067,
+      "rise": -0.0,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.18,
+       "right": 0.2
+      },
+      "foot_lift": {
+       "left": 0.0,
+       "right": 0.0
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.259,
+      "max_r": 0.2,
+      "upright_at_end": true,
+      "upright_after": true
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": -0.01
+     }
+    ]
+   },
+   "eval_summary": {
+    "max_tilt_deg": 10.433,
+    "rise_m": 0.0,
+    "air_s": 0.0,
+    "joint_std": 0.259,
+    "dist": 0.149,
+    "upright_after": 3
+   }
+  },
+  {
+   "id": "dash",
+   "repo": "RemiFabre/microduck-sprint-fixed",
+   "file": "policy.onnx",
+   "dir": "RemiFabre__microduck-sprint-fixed",
+   "kind": "episodic",
+   "category": "trick",
+   "variant": "default",
+   "duration_s": 1.5,
+   "action_scale": 1.0,
+   "vx": 0.0,
+   "cmd": [
+    0.8,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 1,
+   "act_delay": 1,
+   "recurrent": false,
+   "expect": "dash",
+   "featured": true,
+   "travel_m": 2.0,
+   "name": "sprint-fixed",
+   "description": "RemiFabre's 1.7 m/s Arena sprinter as a 1.5 s dash; ends in a tumble (velstand gets up)",
+   "manifest_description": "Mjlab-Sprint2m-MicroDuck",
+   "author": "RemiFabre",
+   "license": "unspecified on the HF card",
+   "hf_sha": "7268f37b737400a47bf9937a3cdef5e1be8b4d9f",
+   "status": "wobbly",
+   "eval": {
+    "trials": [
+     {
+      "dist": 1.944,
+      "dx_heading": 1.932,
+      "yaw_change_deg": -6.3,
+      "max_tilt_deg": 13.1,
+      "inverted": false,
+      "min_z": 0.084,
+      "rise": 0.021,
+      "max_air_s": 0.1,
+      "foot_speed": {
+       "left": 3.0,
+       "right": 2.89
+      },
+      "foot_lift": {
+       "left": 0.061,
+       "right": 0.055
+      },
+      "lift_time_s": 1.16,
+      "joint_std": 0.285,
+      "max_r": 1.95,
+      "end_tilt_deg": 1.6,
+      "upright_at_end": true,
+      "falls_after": 1,
+      "upright_after": true,
+      "resets": 0,
+      "clean": false
+     },
+     {
+      "dist": 1.918,
+      "dx_heading": 1.905,
+      "yaw_change_deg": -4.4,
+      "max_tilt_deg": 13.0,
+      "inverted": false,
+      "min_z": 0.084,
+      "rise": 0.031,
+      "max_air_s": 0.12,
+      "foot_speed": {
+       "left": 3.05,
+       "right": 2.83
+      },
+      "foot_lift": {
+       "left": 0.061,
+       "right": 0.063
+      },
+      "lift_time_s": 1.18,
+      "joint_std": 0.299,
+      "max_r": 1.92,
+      "end_tilt_deg": 9.9,
+      "upright_at_end": true,
+      "falls_after": 1,
+      "upright_after": true,
+      "resets": 0,
+      "clean": false
+     },
+     {
+      "dist": 1.95,
+      "dx_heading": 1.938,
+      "yaw_change_deg": -8.1,
+      "max_tilt_deg": 12.8,
+      "inverted": false,
+      "min_z": 0.084,
+      "rise": 0.02,
+      "max_air_s": 0.1,
+      "foot_speed": {
+       "left": 3.0,
+       "right": 3.0
+      },
+      "foot_lift": {
+       "left": 0.061,
+       "right": 0.053
+      },
+      "lift_time_s": 1.16,
+      "joint_std": 0.289,
+      "max_r": 1.95,
+      "end_tilt_deg": 2.7,
+      "upright_at_end": true,
+      "falls_after": 1,
+      "upright_after": true,
+      "resets": 0,
+      "clean": false
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": -0.013
+     }
+    ]
+   },
+   "eval_summary": {
+    "max_tilt_deg": 12.967,
+    "rise_m": 0.024,
+    "air_s": 0.107,
+    "joint_std": 0.291,
+    "dist": 1.937,
+    "upright_after": 3
+   }
+  },
+  {
+   "id": "flamingo",
+   "repo": "RemiFabre/microduck-flamingo-cycle",
+   "file": "policy.onnx",
+   "dir": "RemiFabre__microduck-flamingo-cycle",
+   "kind": "episodic",
+   "category": "trick",
+   "variant": "default",
+   "duration_s": 7.0,
+   "action_scale": 1.0,
+   "vx": 0.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": [
+    [
+     0.0,
+     [
+      1.0,
+      1.0,
+      0.0
+     ]
+    ],
+    [
+     5.0,
+     [
+      0.0,
+      1.0,
+      0.0
+     ]
+    ]
+   ],
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 1,
+   "recurrent": false,
+   "expect": "lift_foot",
+   "featured": true,
+   "travel_m": null,
+   "name": "flamingo-cycle",
+   "description": "RemiFabre's one-foot flamingo stand",
+   "manifest_description": "Stand on one foot, either side, on command, and come back to a two-foot stand: twist = [flag, side, 0].",
+   "author": "RemiFabre",
+   "license": "apache-2.0",
+   "hf_sha": "a69e4f6103a70e355983eb5d4e919da76778a40f",
+   "status": "pass",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.035,
+      "dx_heading": 0.034,
+      "yaw_change_deg": -70.1,
+      "max_tilt_deg": 27.9,
+      "inverted": false,
+      "min_z": 0.108,
+      "rise": 0.007,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.96,
+       "right": 0.11
+      },
+      "foot_lift": {
+       "left": 0.06,
+       "right": 0.002
+      },
+      "lift_time_s": 3.76,
+      "joint_std": 0.367,
+      "max_r": 0.07,
+      "end_tilt_deg": 1.9,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.038,
+      "dx_heading": 0.038,
+      "yaw_change_deg": -73.2,
+      "max_tilt_deg": 28.0,
+      "inverted": false,
+      "min_z": 0.108,
+      "rise": 0.007,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.96,
+       "right": 0.11
+      },
+      "foot_lift": {
+       "left": 0.06,
+       "right": 0.002
+      },
+      "lift_time_s": 3.74,
+      "joint_std": 0.361,
+      "max_r": 0.07,
+      "end_tilt_deg": 1.9,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.036,
+      "dx_heading": 0.036,
+      "yaw_change_deg": -76.0,
+      "max_tilt_deg": 28.0,
+      "inverted": false,
+      "min_z": 0.107,
+      "rise": 0.007,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.94,
+       "right": 0.11
+      },
+      "foot_lift": {
+       "left": 0.06,
+       "right": 0.002
+      },
+      "lift_time_s": 3.46,
+      "joint_std": 0.357,
+      "max_r": 0.07,
+      "end_tilt_deg": 1.9,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": -0.028
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": -0.028
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": -0.028
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": -0.028
+     }
+    ]
+   },
+   "eval_summary": {
+    "max_tilt_deg": 27.967,
+    "rise_m": 0.007,
+    "air_s": 0.0,
+    "joint_std": 0.362,
+    "dist": 0.036,
+    "upright_after": 3,
+    "lift_time_s": 3.653
+   }
+  },
+  {
+   "id": "flip",
+   "repo": "witcheer/microduck-roulade",
+   "file": "policy.onnx",
+   "dir": "witcheer__microduck-roulade",
+   "kind": "episodic",
+   "category": "trick",
+   "variant": "default",
+   "duration_s": 3.0,
+   "action_scale": 1.0,
+   "vx": 0.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 0,
+   "recurrent": false,
+   "expect": "roll",
+   "featured": false,
+   "travel_m": null,
+   "name": "roulade",
+   "description": "witcheer's forward roll",
+   "manifest_description": "Forward roll from a standing start, trained in simulation only (mjlab / MuJoCo Warp, 10,000 iterations, 4096 envs, 173 min on one RTX 5090). Not yet tested on a real Microduck.",
+   "author": "witcheer",
+   "license": "unspecified on the HF card",
+   "hf_sha": "9d4c9c4f3c754a5a053eef65b3429489fdef70bb",
+   "status": "pass",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.106,
+      "dx_heading": -0.001,
+      "yaw_change_deg": -13.3,
+      "max_tilt_deg": 178.4,
+      "inverted": true,
+      "min_z": 0.046,
+      "rise": 0.039,
+      "max_air_s": 0.04,
+      "foot_speed": {
+       "left": 2.16,
+       "right": 1.75
+      },
+      "foot_lift": {
+       "left": 0.211,
+       "right": 0.19
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.406,
+      "max_r": 0.31,
+      "end_tilt_deg": 1.4,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.297,
+      "dx_heading": 0.289,
+      "yaw_change_deg": 3.4,
+      "max_tilt_deg": 179.1,
+      "inverted": true,
+      "min_z": 0.046,
+      "rise": 0.038,
+      "max_air_s": 0.02,
+      "foot_speed": {
+       "left": 2.16,
+       "right": 1.76
+      },
+      "foot_lift": {
+       "left": 0.209,
+       "right": 0.19
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.369,
+      "max_r": 0.31,
+      "end_tilt_deg": 4.2,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.091,
+      "dx_heading": -0.032,
+      "yaw_change_deg": -26.5,
+      "max_tilt_deg": 177.4,
+      "inverted": true,
+      "min_z": 0.046,
+      "rise": 0.039,
+      "max_air_s": 0.04,
+      "foot_speed": {
+       "left": 2.18,
+       "right": 1.75
+      },
+      "foot_lift": {
+       "left": 0.211,
+       "right": 0.191
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.418,
+      "max_r": 0.3,
+      "end_tilt_deg": 2.2,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": -0.178
+     }
+    ]
+   },
+   "eval_summary": {
+    "max_tilt_deg": 178.3,
+    "rise_m": 0.039,
+    "air_s": 0.033,
+    "joint_std": 0.398,
+    "dist": 0.165,
+    "upright_after": 3
+   }
+  },
+  {
+   "id": "groove",
+   "repo": "kramp/microduck-groove",
+   "file": "policy.onnx",
+   "dir": "kramp__microduck-groove",
+   "kind": "episodic",
+   "category": "trick",
+   "variant": "default",
+   "duration_s": 10.0,
+   "action_scale": 1.0,
+   "vx": 0.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 0,
+   "recurrent": false,
+   "expect": "dance",
+   "featured": true,
+   "travel_m": null,
+   "name": "groove",
+   "description": "kramp's knee-bounce groove",
+   "manifest_description": "In-place groove: rhythmic knee bounce with a small head sway (sim-trained, untested on hardware)",
+   "author": "kramp",
+   "license": "unspecified on the HF card",
+   "hf_sha": "b94e53dfad4c277c48447d44c6b8c014820fcc89",
+   "status": "pass",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.01,
+      "dx_heading": -0.009,
+      "yaw_change_deg": -0.9,
+      "max_tilt_deg": 5.9,
+      "inverted": false,
+      "min_z": 0.104,
+      "rise": 0.0,
+      "max_air_s": 0.04,
+      "foot_speed": {
+       "left": 0.26,
+       "right": 0.23
+      },
+      "foot_lift": {
+       "left": 0.002,
+       "right": 0.002
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.068,
+      "max_r": 0.01,
+      "end_tilt_deg": 2.0,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.01,
+      "dx_heading": -0.009,
+      "yaw_change_deg": 0.6,
+      "max_tilt_deg": 4.7,
+      "inverted": false,
+      "min_z": 0.104,
+      "rise": 0.0,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.29,
+       "right": 0.25
+      },
+      "foot_lift": {
+       "left": 0.001,
+       "right": 0.002
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.065,
+      "max_r": 0.01,
+      "end_tilt_deg": 2.4,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.01,
+      "dx_heading": -0.009,
+      "yaw_change_deg": 0.2,
+      "max_tilt_deg": 5.6,
+      "inverted": false,
+      "min_z": 0.104,
+      "rise": 0.0,
+      "max_air_s": 0.02,
+      "foot_speed": {
+       "left": 0.26,
+       "right": 0.25
+      },
+      "foot_lift": {
+       "left": 0.001,
+       "right": 0.002
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.067,
+      "max_r": 0.01,
+      "end_tilt_deg": 2.1,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": -0.005
+     }
+    ]
+   },
+   "eval_summary": {
+    "max_tilt_deg": 5.4,
+    "rise_m": 0.0,
+    "air_s": 0.02,
+    "joint_std": 0.067,
+    "dist": 0.01,
+    "upright_after": 3
+   }
+  },
+  {
+   "id": "hop",
+   "repo": "joanfox/microduck-happy-hop",
+   "file": "policy.onnx",
+   "dir": "joanfox__microduck-happy-hop",
+   "kind": "episodic",
+   "category": "trick",
+   "variant": "default",
+   "duration_s": 3.0,
+   "action_scale": 1.0,
+   "vx": 0.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 1,
+   "recurrent": false,
+   "expect": "hop",
+   "featured": true,
+   "travel_m": null,
+   "name": "happy-hop",
+   "description": "joanfox's happy two-foot hop",
+   "manifest_description": "Short vertical two-foot hop: stabilize, crouch with hips and knees, extend, take off, absorb the landing, and return toward HOME.",
+   "author": "joanfox",
+   "license": "apache-2.0",
+   "hf_sha": "c0447da668255436eea070e862ad8eb89bad2ba1",
+   "status": "pass",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.239,
+      "dx_heading": 0.238,
+      "yaw_change_deg": 12.1,
+      "max_tilt_deg": 15.0,
+      "inverted": false,
+      "min_z": 0.096,
+      "rise": 0.02,
+      "max_air_s": 0.12,
+      "foot_speed": {
+       "left": 1.11,
+       "right": 1.12
+      },
+      "foot_lift": {
+       "left": 0.033,
+       "right": 0.032
+      },
+      "lift_time_s": 0.08,
+      "joint_std": 0.201,
+      "max_r": 0.24,
+      "end_tilt_deg": 2.1,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.253,
+      "dx_heading": 0.253,
+      "yaw_change_deg": 10.8,
+      "max_tilt_deg": 13.6,
+      "inverted": false,
+      "min_z": 0.098,
+      "rise": 0.02,
+      "max_air_s": 0.1,
+      "foot_speed": {
+       "left": 1.0,
+       "right": 0.98
+      },
+      "foot_lift": {
+       "left": 0.034,
+       "right": 0.034
+      },
+      "lift_time_s": 0.1,
+      "joint_std": 0.205,
+      "max_r": 0.25,
+      "end_tilt_deg": 13.6,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.211,
+      "dx_heading": 0.211,
+      "yaw_change_deg": 8.9,
+      "max_tilt_deg": 14.2,
+      "inverted": false,
+      "min_z": 0.099,
+      "rise": 0.019,
+      "max_air_s": 0.1,
+      "foot_speed": {
+       "left": 1.06,
+       "right": 1.03
+      },
+      "foot_lift": {
+       "left": 0.034,
+       "right": 0.033
+      },
+      "lift_time_s": 0.08,
+      "joint_std": 0.197,
+      "max_r": 0.23,
+      "end_tilt_deg": 7.3,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": -0.014
+     }
+    ]
+   },
+   "eval_summary": {
+    "max_tilt_deg": 14.267,
+    "rise_m": 0.02,
+    "air_s": 0.107,
+    "joint_std": 0.201,
+    "dist": 0.234,
+    "upright_after": 3
+   }
+  },
+  {
+   "id": "hum",
+   "repo": "microduckapp/microduck-humming-along",
+   "file": "policy.onnx",
+   "dir": "microduckapp__microduck-humming-along",
+   "kind": "episodic",
+   "category": "trick",
+   "variant": "default",
+   "duration_s": 10.85,
+   "action_scale": 1.0,
+   "vx": 0.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 0,
+   "recurrent": true,
+   "expect": "dance",
+   "featured": false,
+   "travel_m": null,
+   "name": "humming-along",
+   "description": "microduckapp's humming sway (LSTM)",
+   "manifest_description": "Hums a little tune to itself, swaying side to side and nodding on every beat, lost in the music.",
+   "author": "microduckapp",
+   "license": "unspecified on the HF card",
+   "hf_sha": "9a9a42a52bd9b552ab7bf1e0e8238b9fe98205f1",
+   "status": "pass",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.003,
+      "dx_heading": 0.003,
+      "yaw_change_deg": -1.6,
+      "max_tilt_deg": 2.8,
+      "inverted": false,
+      "min_z": 0.116,
+      "rise": 0.0,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.01,
+       "right": 0.0
+      },
+      "foot_lift": {
+       "left": 0.0,
+       "right": 0.0
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.052,
+      "max_r": 0.01,
+      "end_tilt_deg": 2.5,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.003,
+      "dx_heading": 0.002,
+      "yaw_change_deg": -2.0,
+      "max_tilt_deg": 2.8,
+      "inverted": false,
+      "min_z": 0.116,
+      "rise": 0.0,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.01,
+       "right": 0.0
+      },
+      "foot_lift": {
+       "left": 0.0,
+       "right": 0.0
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.052,
+      "max_r": 0.0,
+      "end_tilt_deg": 2.5,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.002,
+      "dx_heading": 0.002,
+      "yaw_change_deg": -1.8,
+      "max_tilt_deg": 2.8,
+      "inverted": false,
+      "min_z": 0.116,
+      "rise": 0.0,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.01,
+       "right": 0.0
+      },
+      "foot_lift": {
+       "left": 0.0,
+       "right": 0.0
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.052,
+      "max_r": 0.0,
+      "end_tilt_deg": 2.5,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": -0.003
+     }
+    ]
+   },
+   "eval_summary": {
+    "max_tilt_deg": 2.8,
+    "rise_m": 0.0,
+    "air_s": 0.0,
+    "joint_std": 0.052,
+    "dist": 0.003,
+    "upright_after": 3
+   }
+  },
+  {
+   "id": "kick",
+   "repo": "pollen-robotics/microduck-policies",
+   "file": "ball_kick_right.onnx",
+   "dir": "pollen-robotics__microduck-policies__ball_kick_right",
+   "kind": "episodic",
+   "category": "trick",
+   "variant": "default",
+   "duration_s": 0.5,
+   "action_scale": 1.0,
+   "vx": 0.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 0,
+   "recurrent": false,
+   "expect": "kick_right",
+   "featured": true,
+   "travel_m": null,
+   "name": "kick_right",
+   "description": "Pollen's right-foot ball kick (no ball in the sim)",
+   "manifest_description": "The policy set a microduck ships with: walking, standing, and the one-shots its buttons run.",
+   "author": "pollen-robotics",
+   "license": "apache-2.0",
+   "hf_sha": "665ae4eb20bfe13bca1ef4ea6d4bb6b4a096e448",
+   "status": "pass",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.033,
+      "dx_heading": 0.02,
+      "yaw_change_deg": 14.8,
+      "max_tilt_deg": 3.0,
+      "inverted": false,
+      "min_z": 0.108,
+      "rise": 0.004,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.39,
+       "right": 0.82
+      },
+      "foot_lift": {
+       "left": 0.007,
+       "right": 0.025
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.077,
+      "max_r": 0.04,
+      "end_tilt_deg": 3.0,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.031,
+      "dx_heading": 0.021,
+      "yaw_change_deg": 13.5,
+      "max_tilt_deg": 3.1,
+      "inverted": false,
+      "min_z": 0.109,
+      "rise": 0.004,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.34,
+       "right": 0.83
+      },
+      "foot_lift": {
+       "left": 0.007,
+       "right": 0.025
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.076,
+      "max_r": 0.03,
+      "end_tilt_deg": 3.1,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.033,
+      "dx_heading": 0.02,
+      "yaw_change_deg": 13.5,
+      "max_tilt_deg": 3.0,
+      "inverted": false,
+      "min_z": 0.109,
+      "rise": 0.004,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.39,
+       "right": 0.83
+      },
+      "foot_lift": {
+       "left": 0.007,
+       "right": 0.025
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.077,
+      "max_r": 0.04,
+      "end_tilt_deg": 3.0,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": -0.003
+     }
+    ]
+   },
+   "eval_summary": {
+    "max_tilt_deg": 3.033,
+    "rise_m": 0.004,
+    "air_s": 0.0,
+    "joint_std": 0.077,
+    "dist": 0.032,
+    "upright_after": 3,
+    "foot_speed": {
+     "left": 0.39,
+     "right": 0.82
+    }
+   }
+  },
+  {
+   "id": "kick-left",
+   "repo": "pollen-robotics/microduck-policies",
+   "file": "ball_kick_left.onnx",
+   "dir": "pollen-robotics__microduck-policies__ball_kick_left",
+   "kind": "episodic",
+   "category": "trick",
+   "variant": "default",
+   "duration_s": 0.5,
+   "action_scale": 1.0,
+   "vx": 0.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 0,
+   "recurrent": false,
+   "expect": "kick_left",
+   "featured": false,
+   "travel_m": null,
+   "name": "kick_left",
+   "description": "Pollen's left-foot ball kick (no ball in the sim)",
+   "manifest_description": "The policy set a microduck ships with: walking, standing, and the one-shots its buttons run.",
+   "author": "pollen-robotics",
+   "license": "apache-2.0",
+   "hf_sha": "665ae4eb20bfe13bca1ef4ea6d4bb6b4a096e448",
+   "status": "pass",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.028,
+      "dx_heading": 0.028,
+      "yaw_change_deg": -21.6,
+      "max_tilt_deg": 2.0,
+      "inverted": false,
+      "min_z": 0.109,
+      "rise": 0.002,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.94,
+       "right": 0.19
+      },
+      "foot_lift": {
+       "left": 0.019,
+       "right": 0.007
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.077,
+      "max_r": 0.03,
+      "end_tilt_deg": 1.6,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.028,
+      "dx_heading": 0.027,
+      "yaw_change_deg": -22.2,
+      "max_tilt_deg": 1.9,
+      "inverted": false,
+      "min_z": 0.108,
+      "rise": 0.002,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.94,
+       "right": 0.18
+      },
+      "foot_lift": {
+       "left": 0.02,
+       "right": 0.007
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.077,
+      "max_r": 0.03,
+      "end_tilt_deg": 1.6,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.029,
+      "dx_heading": 0.028,
+      "yaw_change_deg": -21.1,
+      "max_tilt_deg": 2.0,
+      "inverted": false,
+      "min_z": 0.109,
+      "rise": 0.002,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.95,
+       "right": 0.19
+      },
+      "foot_lift": {
+       "left": 0.019,
+       "right": 0.007
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.076,
+      "max_r": 0.03,
+      "end_tilt_deg": 1.6,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": -0.002
+     }
+    ]
+   },
+   "eval_summary": {
+    "max_tilt_deg": 1.967,
+    "rise_m": 0.002,
+    "air_s": 0.0,
+    "joint_std": 0.077,
+    "dist": 0.028,
+    "upright_after": 3,
+    "foot_speed": {
+     "left": 0.94,
+     "right": 0.19
+    }
+   }
+  },
+  {
+   "id": "kick-w",
+   "repo": "witcheer/microduck-kick-right",
+   "file": "policy.onnx",
+   "dir": "witcheer__microduck-kick-right",
+   "kind": "episodic",
+   "category": "trick",
+   "variant": "default",
+   "duration_s": 1.0,
+   "action_scale": 1.0,
+   "vx": 0.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 1,
+   "act_delay": 0,
+   "recurrent": false,
+   "expect": "kick_right",
+   "featured": false,
+   "travel_m": null,
+   "name": "kick-right",
+   "description": "witcheer's right-foot kick",
+   "manifest_description": "Right-foot ball kick from a standing start (Mjlab-BallKick-Flat-MicroDuck), trained in simulation only: 10,000 iterations, 4096 envs, 161 min on one RTX 5090. Blind to the ball by design, so the ball must sit at the right toe (trained with +-1.5 cm placement noise). In 3 of 3 sim takes the ball trav",
+   "author": "witcheer",
+   "license": "unspecified on the HF card",
+   "hf_sha": "9771f49e5b06d5c461dadb28e2c0567976841c84",
+   "status": "wobbly",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.005,
+      "dx_heading": 0.005,
+      "yaw_change_deg": -1.0,
+      "max_tilt_deg": 2.4,
+      "inverted": false,
+      "min_z": 0.115,
+      "rise": -0.0,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.02,
+       "right": 0.03
+      },
+      "foot_lift": {
+       "left": 0.0,
+       "right": 0.0
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.008,
+      "max_r": 0.01,
+      "end_tilt_deg": 2.4,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.057,
+      "dx_heading": 0.027,
+      "yaw_change_deg": 17.3,
+      "max_tilt_deg": 3.1,
+      "inverted": false,
+      "min_z": 0.105,
+      "rise": 0.003,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.57,
+       "right": 1.3
+      },
+      "foot_lift": {
+       "left": 0.011,
+       "right": 0.047
+      },
+      "lift_time_s": 0.08,
+      "joint_std": 0.093,
+      "max_r": 0.06,
+      "end_tilt_deg": 2.8,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.056,
+      "dx_heading": 0.023,
+      "yaw_change_deg": 13.1,
+      "max_tilt_deg": 3.2,
+      "inverted": false,
+      "min_z": 0.104,
+      "rise": 0.001,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.56,
+       "right": 1.35
+      },
+      "foot_lift": {
+       "left": 0.011,
+       "right": 0.047
+      },
+      "lift_time_s": 0.08,
+      "joint_std": 0.094,
+      "max_r": 0.06,
+      "end_tilt_deg": 3.1,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     }
+    ],
+    "ok": 2,
+    "did": 2,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0
+      },
+      "ok": 2,
+      "did": 2,
+      "perf": -0.003
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0
+      },
+      "ok": 2,
+      "did": 2,
+      "perf": -0.003
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1
+      },
+      "ok": 2,
+      "did": 2,
+      "perf": -0.003
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1
+      },
+      "ok": 2,
+      "did": 2,
+      "perf": -0.005
+     }
+    ]
+   },
+   "eval_summary": {
+    "max_tilt_deg": 2.9,
+    "rise_m": 0.001,
+    "air_s": 0.0,
+    "joint_std": 0.065,
+    "dist": 0.039,
+    "upright_after": 3,
+    "foot_speed": {
+     "left": 0.02,
+     "right": 0.03
+    }
+   }
+  },
+  {
+   "id": "leap",
+   "repo": "chelleboyer/microduck-hop-once",
+   "file": "policy.onnx",
+   "dir": "chelleboyer__microduck-hop-once",
+   "kind": "episodic",
+   "category": "trick",
+   "variant": "default",
+   "duration_s": 3.0,
+   "action_scale": 1.0,
+   "vx": 0.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 1,
+   "recurrent": false,
+   "expect": "hop",
+   "featured": false,
+   "travel_m": null,
+   "name": "hop-once",
+   "description": "chelleboyer's forward hop",
+   "manifest_description": "One forward hop (~7 cm, 0.16 s air), then stand. Sim-only, hardware-unverified. Warm-started from ThomasBurgess2000/microduck-max-height-jump (Apache-2.0).",
+   "author": "chelleboyer",
+   "license": "apache-2.0",
+   "hf_sha": "f4da0cf1f635cc8e3d90108f30f05b8a874f8ffc",
+   "status": "pass",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.054,
+      "dx_heading": 0.051,
+      "yaw_change_deg": 8.2,
+      "max_tilt_deg": 14.9,
+      "inverted": false,
+      "min_z": 0.108,
+      "rise": 0.024,
+      "max_air_s": 0.12,
+      "foot_speed": {
+       "left": 0.77,
+       "right": 0.7
+      },
+      "foot_lift": {
+       "left": 0.019,
+       "right": 0.018
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.114,
+      "max_r": 0.06,
+      "end_tilt_deg": 3.6,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.054,
+      "dx_heading": 0.051,
+      "yaw_change_deg": 8.4,
+      "max_tilt_deg": 14.8,
+      "inverted": false,
+      "min_z": 0.108,
+      "rise": 0.025,
+      "max_air_s": 0.12,
+      "foot_speed": {
+       "left": 0.75,
+       "right": 0.71
+      },
+      "foot_lift": {
+       "left": 0.02,
+       "right": 0.019
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.112,
+      "max_r": 0.06,
+      "end_tilt_deg": 3.4,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.055,
+      "dx_heading": 0.046,
+      "yaw_change_deg": 6.3,
+      "max_tilt_deg": 15.0,
+      "inverted": false,
+      "min_z": 0.108,
+      "rise": 0.024,
+      "max_air_s": 0.1,
+      "foot_speed": {
+       "left": 0.7,
+       "right": 0.77
+      },
+      "foot_lift": {
+       "left": 0.02,
+       "right": 0.016
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.108,
+      "max_r": 0.06,
+      "end_tilt_deg": 3.6,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0
+      },
+      "ok": 2,
+      "did": 2,
+      "perf": -0.018
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": -0.021
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": -0.015
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": -0.066
+     }
+    ]
+   },
+   "eval_summary": {
+    "max_tilt_deg": 14.9,
+    "rise_m": 0.024,
+    "air_s": 0.113,
+    "joint_std": 0.111,
+    "dist": 0.054,
+    "upright_after": 3
+   }
+  },
+  {
+   "id": "pick",
+   "repo": "pollen-robotics/microduck-policies",
+   "file": "alpha_ground_pick.onnx",
+   "dir": "pollen-robotics__microduck-policies__alpha_ground_pick",
+   "kind": "episodic",
+   "category": "trick",
+   "variant": "default",
+   "duration_s": 2.8,
+   "action_scale": 1.0,
+   "vx": 0.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": [
+    4.0,
+    0.7
+   ],
+   "jv_lag": 0,
+   "act_delay": 0,
+   "recurrent": false,
+   "expect": "bow",
+   "featured": false,
+   "travel_m": null,
+   "name": "ground_pick",
+   "description": "Pollen's ground pick (beak to the floor)",
+   "manifest_description": "The policy set a microduck ships with: walking, standing, and the one-shots its buttons run.",
+   "author": "pollen-robotics",
+   "license": "apache-2.0",
+   "hf_sha": "665ae4eb20bfe13bca1ef4ea6d4bb6b4a096e448",
+   "status": "pass",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.008,
+      "dx_heading": 0.008,
+      "yaw_change_deg": 1.0,
+      "max_tilt_deg": 35.3,
+      "inverted": false,
+      "min_z": 0.088,
+      "rise": 0.0,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.03,
+       "right": 0.03
+      },
+      "foot_lift": {
+       "left": 0.002,
+       "right": 0.002
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.231,
+      "max_r": 0.03,
+      "end_tilt_deg": 6.3,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.008,
+      "dx_heading": 0.008,
+      "yaw_change_deg": 0.4,
+      "max_tilt_deg": 35.3,
+      "inverted": false,
+      "min_z": 0.088,
+      "rise": 0.0,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.04,
+       "right": 0.03
+      },
+      "foot_lift": {
+       "left": 0.002,
+       "right": 0.002
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.231,
+      "max_r": 0.04,
+      "end_tilt_deg": 6.4,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.007,
+      "dx_heading": 0.007,
+      "yaw_change_deg": 1.0,
+      "max_tilt_deg": 35.3,
+      "inverted": false,
+      "min_z": 0.088,
+      "rise": 0.0,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.04,
+       "right": 0.03
+      },
+      "foot_lift": {
+       "left": 0.002,
+       "right": 0.002
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.231,
+      "max_r": 0.03,
+      "end_tilt_deg": 6.4,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": -0.035
+     }
+    ]
+   },
+   "eval_summary": {
+    "max_tilt_deg": 35.3,
+    "rise_m": 0.0,
+    "air_s": 0.0,
+    "joint_std": 0.231,
+    "dist": 0.008,
+    "upright_after": 3
+   }
+  },
+  {
+   "id": "playdead",
+   "repo": "drfonz-indigo/microduck-playdead",
+   "file": "policy.onnx",
+   "dir": "drfonz-indigo__microduck-playdead",
+   "kind": "episodic",
+   "category": "trick",
+   "variant": "default",
+   "duration_s": 5.0,
+   "action_scale": 1.0,
+   "vx": 0.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 0,
+   "recurrent": false,
+   "expect": "liedown",
+   "featured": true,
+   "travel_m": null,
+   "name": "playdead",
+   "description": "drfonz-indigo's bang-you're-dead flop",
+   "manifest_description": "Finger gun... bang! Sits, flops onto its back, legs up, head to one side.",
+   "author": "drfonz-indigo",
+   "license": "unspecified on the HF card",
+   "hf_sha": "7b49a6a70e781096c6a39fc3ce5cea25307e8565",
+   "status": "pass",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.145,
+      "dx_heading": -0.145,
+      "yaw_change_deg": 163.2,
+      "max_tilt_deg": 92.1,
+      "inverted": false,
+      "min_z": 0.046,
+      "rise": -0.0,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.63,
+       "right": 0.58
+      },
+      "foot_lift": {
+       "left": 0.079,
+       "right": 0.08
+      },
+      "lift_time_s": 0.04,
+      "joint_std": 0.234,
+      "max_r": 0.14,
+      "end_tilt_deg": 90.4,
+      "upright_at_end": false,
+      "falls_after": 1,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.143,
+      "dx_heading": -0.143,
+      "yaw_change_deg": 163.5,
+      "max_tilt_deg": 92.1,
+      "inverted": false,
+      "min_z": 0.046,
+      "rise": -0.0,
+      "max_air_s": 0.02,
+      "foot_speed": {
+       "left": 0.63,
+       "right": 0.58
+      },
+      "foot_lift": {
+       "left": 0.079,
+       "right": 0.08
+      },
+      "lift_time_s": 0.02,
+      "joint_std": 0.233,
+      "max_r": 0.14,
+      "end_tilt_deg": 90.4,
+      "upright_at_end": false,
+      "falls_after": 1,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.144,
+      "dx_heading": -0.144,
+      "yaw_change_deg": 165.7,
+      "max_tilt_deg": 92.0,
+      "inverted": false,
+      "min_z": 0.046,
+      "rise": -0.0,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.64,
+       "right": 0.59
+      },
+      "foot_lift": {
+       "left": 0.078,
+       "right": 0.079
+      },
+      "lift_time_s": 0.02,
+      "joint_std": 0.233,
+      "max_r": 0.14,
+      "end_tilt_deg": 90.4,
+      "upright_at_end": false,
+      "falls_after": 1,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": -0.092
+     }
+    ]
+   },
+   "eval_summary": {
+    "max_tilt_deg": 92.067,
+    "rise_m": 0.0,
+    "air_s": 0.007,
+    "joint_std": 0.233,
+    "dist": 0.144,
+    "upright_after": 3,
+    "end_tilt_deg": 90.4
+   }
+  },
+  {
+   "id": "roulade",
+   "repo": "pollen-robotics/microduck-policies",
+   "file": "roulade.onnx",
+   "dir": "pollen-robotics__microduck-policies__roulade",
+   "kind": "episodic",
+   "category": "trick",
+   "variant": "default",
+   "duration_s": 1.8,
+   "action_scale": 1.0,
+   "vx": 0.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 0,
+   "recurrent": false,
+   "expect": "roll",
+   "featured": true,
+   "travel_m": null,
+   "name": "roulade",
+   "description": "Pollen's forward roll",
+   "manifest_description": "The policy set a microduck ships with: walking, standing, and the one-shots its buttons run.",
+   "author": "pollen-robotics",
+   "license": "apache-2.0",
+   "hf_sha": "665ae4eb20bfe13bca1ef4ea6d4bb6b4a096e448",
+   "status": "pass",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.586,
+      "dx_heading": 0.586,
+      "yaw_change_deg": 3.0,
+      "max_tilt_deg": 178.6,
+      "inverted": true,
+      "min_z": 0.046,
+      "rise": 0.062,
+      "max_air_s": 0.04,
+      "foot_speed": {
+       "left": 1.58,
+       "right": 1.65
+      },
+      "foot_lift": {
+       "left": 0.229,
+       "right": 0.226
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.32,
+      "max_r": 0.59,
+      "end_tilt_deg": 1.2,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.585,
+      "dx_heading": 0.585,
+      "yaw_change_deg": 0.6,
+      "max_tilt_deg": 178.0,
+      "inverted": true,
+      "min_z": 0.047,
+      "rise": 0.061,
+      "max_air_s": 0.04,
+      "foot_speed": {
+       "left": 1.55,
+       "right": 1.66
+      },
+      "foot_lift": {
+       "left": 0.23,
+       "right": 0.226
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.319,
+      "max_r": 0.59,
+      "end_tilt_deg": 1.0,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     },
+     {
+      "dist": 0.585,
+      "dx_heading": 0.585,
+      "yaw_change_deg": 2.1,
+      "max_tilt_deg": 177.7,
+      "inverted": true,
+      "min_z": 0.047,
+      "rise": 0.062,
+      "max_air_s": 0.1,
+      "foot_speed": {
+       "left": 1.57,
+       "right": 1.65
+      },
+      "foot_lift": {
+       "left": 0.23,
+       "right": 0.226
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.319,
+      "max_r": 0.59,
+      "end_tilt_deg": 1.0,
+      "upright_at_end": true,
+      "falls_after": 0,
+      "upright_after": true,
+      "resets": 0,
+      "clean": true
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": -0.178
+     }
+    ]
+   },
+   "eval_summary": {
+    "max_tilt_deg": 178.1,
+    "rise_m": 0.062,
+    "air_s": 0.06,
+    "joint_std": 0.319,
+    "dist": 0.585,
+    "upright_after": 3
+   }
+  },
+  {
+   "id": "arena-skate",
+   "repo": "namenu/microduck-arena",
+   "file": "policy.onnx",
+   "dir": "namenu__microduck-arena",
+   "kind": "perpetual",
+   "category": "roller",
+   "variant": "rollers",
+   "duration_s": null,
+   "action_scale": 1.0,
+   "vx": 1.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 1,
+   "act_delay": 0,
+   "recurrent": false,
+   "expect": null,
+   "featured": false,
+   "travel_m": null,
+   "name": "strata-roller-pb4",
+   "description": "namenu's Arena roller (PPO + ES)",
+   "manifest_description": "Trained and judged in Strata on microduck-challenges' roller env, own lineage: PPO on race commands with the calm-skate shaping removed and a light upright term, then four rounds of ES on the Arena roller scorer.",
+   "author": "namenu",
+   "license": "unspecified on the HF card",
+   "hf_sha": "37e7e1aa71ff1b64410eba40aec70f423b24d655",
+   "status": "fail",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.092,
+      "dx_heading": -0.026,
+      "yaw_change_deg": -21.9,
+      "max_tilt_deg": 96.3,
+      "inverted": false,
+      "min_z": 0.036,
+      "rise": 0.017,
+      "max_air_s": 0.08,
+      "foot_speed": {
+       "left": 31.11,
+       "right": 23.17
+      },
+      "foot_lift": {
+       "left": 0.016,
+       "right": 0.027
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.164,
+      "max_r": 0.53,
+      "speed": 0.015,
+      "fell": true,
+      "handback_upright": true
+     },
+     {
+      "dist": 0.092,
+      "dx_heading": -0.026,
+      "yaw_change_deg": -22.3,
+      "max_tilt_deg": 95.4,
+      "inverted": false,
+      "min_z": 0.035,
+      "rise": 0.017,
+      "max_air_s": 0.08,
+      "foot_speed": {
+       "left": 31.44,
+       "right": 23.57
+      },
+      "foot_lift": {
+       "left": 0.015,
+       "right": 0.027
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.165,
+      "max_r": 0.53,
+      "speed": 0.015,
+      "fell": true,
+      "handback_upright": true
+     },
+     {
+      "dist": 0.092,
+      "dx_heading": -0.026,
+      "yaw_change_deg": -23.5,
+      "max_tilt_deg": 96.8,
+      "inverted": false,
+      "min_z": 0.036,
+      "rise": 0.017,
+      "max_air_s": 0.08,
+      "foot_speed": {
+       "left": 30.79,
+       "right": 22.92
+      },
+      "foot_lift": {
+       "left": 0.02,
+       "right": 0.027
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.165,
+      "max_r": 0.53,
+      "speed": 0.015,
+      "fell": true,
+      "handback_upright": true
+     }
+    ],
+    "ok": 0,
+    "did": 0,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": 0.013
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": 0.013
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": 0.015
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": 0.014
+     }
+    ]
+   },
+   "eval_summary": {
+    "speed_mps": 0.015,
+    "dist_6s": 0.092,
+    "fell": 3,
+    "yaw_drift_deg": -22.567,
+    "max_tilt_deg": 96.167
+   }
+  },
+  {
+   "id": "rhod",
+   "repo": "RhodWeo/microduck-rhod-roller",
+   "file": "policy.onnx",
+   "dir": "RhodWeo__microduck-rhod-roller",
+   "kind": "perpetual",
+   "category": "roller",
+   "variant": "rollers",
+   "duration_s": null,
+   "action_scale": 1.0,
+   "vx": 1.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 0,
+   "recurrent": false,
+   "expect": null,
+   "featured": false,
+   "travel_m": null,
+   "name": "Rhod",
+   "description": "RhodWeo's ES-tuned roller sprinter",
+   "manifest_description": "2 m Roller Sprint skater: PPO dash run (commit 012b7b7, checkpoint 1750) fine-tuned by evolution strategies on fresh seeds only (three rounds): 1.244 s, 5/5, 20/20 unseen",
+   "author": "RhodWeo",
+   "license": "unspecified on the HF card",
+   "hf_sha": "e0e7e5d0f7e79440c6375235b18486eb53914ba7",
+   "status": "fail",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.702,
+      "dx_heading": 0.666,
+      "yaw_change_deg": -19.5,
+      "max_tilt_deg": 21.0,
+      "inverted": false,
+      "min_z": 0.106,
+      "rise": 0.001,
+      "max_air_s": 0.04,
+      "foot_speed": {
+       "left": 1.73,
+       "right": 1.8
+      },
+      "foot_lift": {
+       "left": 0.005,
+       "right": 0.012
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.087,
+      "max_r": 2.02,
+      "speed": 0.117,
+      "fell": true,
+      "steer_deg": 178.6,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.49,
+      "leash_brain_kept": 0.26,
+      "leash_ok": false
+     },
+     {
+      "dist": 0.636,
+      "dx_heading": -0.592,
+      "yaw_change_deg": 27.9,
+      "max_tilt_deg": 20.9,
+      "inverted": false,
+      "min_z": 0.095,
+      "rise": -0.001,
+      "max_air_s": 0.04,
+      "foot_speed": {
+       "left": 1.74,
+       "right": 1.85
+      },
+      "foot_lift": {
+       "left": 0.006,
+       "right": 0.01
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.1,
+      "max_r": 2.16,
+      "speed": 0.106,
+      "fell": true,
+      "steer_deg": 167.5,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.49,
+      "leash_brain_kept": 0.26,
+      "leash_ok": false
+     },
+     {
+      "dist": 0.813,
+      "dx_heading": -0.615,
+      "yaw_change_deg": 30.6,
+      "max_tilt_deg": 21.7,
+      "inverted": false,
+      "min_z": 0.105,
+      "rise": -0.001,
+      "max_air_s": 0.04,
+      "foot_speed": {
+       "left": 1.66,
+       "right": 1.76
+      },
+      "foot_lift": {
+       "left": 0.007,
+       "right": 0.013
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.093,
+      "max_r": 2.01,
+      "speed": 0.135,
+      "fell": true,
+      "steer_deg": 57.6,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.49,
+      "leash_brain_kept": 0.26,
+      "leash_ok": false
+     }
+    ],
+    "ok": 0,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": 0.007
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": 0.007
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 2,
+      "perf": 0.131
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 0.119
+     }
+    ]
+   },
+   "eval_summary": {
+    "speed_mps": 0.119,
+    "dist_6s": 0.717,
+    "fell": 3,
+    "yaw_drift_deg": 13.0,
+    "max_tilt_deg": 21.2,
+    "leash_falls_20s": 6,
+    "leash_max_r": 1.49,
+    "leash_brain_kept": 0.26,
+    "steer_deg": 134.567
+   }
+  },
+  {
+   "id": "roller",
+   "repo": "pollen-robotics/microduck-policies",
+   "file": "roller.onnx",
+   "dir": "pollen-robotics__microduck-policies__roller",
+   "kind": "perpetual",
+   "category": "roller",
+   "variant": "rollers",
+   "duration_s": null,
+   "action_scale": 0.8,
+   "vx": 0.4,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 1,
+   "act_delay": 0,
+   "recurrent": false,
+   "expect": null,
+   "featured": true,
+   "travel_m": null,
+   "name": "roller",
+   "description": "Pollen's official roller-skating gait",
+   "manifest_description": "The policy set a microduck ships with: walking, standing, and the one-shots its buttons run.",
+   "author": "pollen-robotics",
+   "license": "apache-2.0",
+   "hf_sha": "665ae4eb20bfe13bca1ef4ea6d4bb6b4a096e448",
+   "status": "pass",
+   "eval": {
+    "trials": [
+     {
+      "dist": 2.563,
+      "dx_heading": 2.541,
+      "yaw_change_deg": 0.9,
+      "max_tilt_deg": 15.2,
+      "inverted": false,
+      "min_z": 0.112,
+      "rise": 0.003,
+      "max_air_s": 0.04,
+      "foot_speed": {
+       "left": 0.61,
+       "right": 0.63
+      },
+      "foot_lift": {
+       "left": 0.001,
+       "right": 0.002
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.124,
+      "max_r": 2.57,
+      "speed": 0.427,
+      "fell": false,
+      "steer_deg": 89.4,
+      "handback_upright": true,
+      "leash_falls": 0,
+      "leash_max_r": 1.56,
+      "leash_brain_kept": 1.0,
+      "leash_ok": true
+     },
+     {
+      "dist": 2.568,
+      "dx_heading": 2.553,
+      "yaw_change_deg": 8.1,
+      "max_tilt_deg": 15.4,
+      "inverted": false,
+      "min_z": 0.112,
+      "rise": 0.003,
+      "max_air_s": 0.02,
+      "foot_speed": {
+       "left": 0.6,
+       "right": 0.61
+      },
+      "foot_lift": {
+       "left": 0.002,
+       "right": 0.002
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.123,
+      "max_r": 2.58,
+      "speed": 0.428,
+      "fell": false,
+      "steer_deg": 89.9,
+      "handback_upright": true,
+      "leash_falls": 0,
+      "leash_max_r": 1.56,
+      "leash_brain_kept": 1.0,
+      "leash_ok": true
+     },
+     {
+      "dist": 2.605,
+      "dx_heading": 2.605,
+      "yaw_change_deg": -8.2,
+      "max_tilt_deg": 15.4,
+      "inverted": false,
+      "min_z": 0.112,
+      "rise": 0.003,
+      "max_air_s": 0.02,
+      "foot_speed": {
+       "left": 0.62,
+       "right": 0.64
+      },
+      "foot_lift": {
+       "left": 0.001,
+       "right": 0.002
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.124,
+      "max_r": 2.61,
+      "speed": 0.434,
+      "fell": false,
+      "steer_deg": 89.9,
+      "handback_upright": true,
+      "leash_falls": 0,
+      "leash_max_r": 1.56,
+      "leash_brain_kept": 1.0,
+      "leash_ok": true
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 0.4
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 0.408
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 0.4
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.419
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 0.4
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.43
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 0.4
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.424
+     }
+    ]
+   },
+   "eval_summary": {
+    "speed_mps": 0.43,
+    "dist_6s": 2.579,
+    "fell": 0,
+    "yaw_drift_deg": 0.267,
+    "max_tilt_deg": 15.333,
+    "leash_falls_20s": 0,
+    "leash_max_r": 1.56,
+    "leash_brain_kept": 1.0,
+    "steer_deg": 89.733
+   }
+  },
+  {
+   "id": "roller-fixed",
+   "repo": "RemiFabre/microduck-roller-fixed",
+   "file": "policy.onnx",
+   "dir": "RemiFabre__microduck-roller-fixed",
+   "kind": "perpetual",
+   "category": "roller",
+   "variant": "rollers",
+   "duration_s": null,
+   "action_scale": 1.0,
+   "vx": 0.6,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 1,
+   "recurrent": false,
+   "expect": null,
+   "featured": false,
+   "travel_m": null,
+   "name": "roller-fixed",
+   "description": "RemiFabre's 'free-calm' roller",
+   "manifest_description": "Mjlab-RollerSprint2m-MicroDuck",
+   "author": "RemiFabre",
+   "license": "unspecified on the HF card",
+   "hf_sha": "690d90adcfc51c1f026bb9b3d3c76d28708269c7",
+   "status": "fail",
+   "eval": {
+    "trials": [
+     {
+      "dist": 4.037,
+      "dx_heading": 3.91,
+      "yaw_change_deg": -74.2,
+      "max_tilt_deg": 16.2,
+      "inverted": false,
+      "min_z": 0.098,
+      "rise": 0.004,
+      "max_air_s": 0.04,
+      "foot_speed": {
+       "left": 1.1,
+       "right": 1.34
+      },
+      "foot_lift": {
+       "left": 0.022,
+       "right": 0.002
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.116,
+      "max_r": 4.07,
+      "speed": 0.673,
+      "fell": true,
+      "steer_deg": 128.6,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.71,
+      "leash_brain_kept": 0.33,
+      "leash_ok": false
+     },
+     {
+      "dist": 4.107,
+      "dx_heading": 4.044,
+      "yaw_change_deg": -57.8,
+      "max_tilt_deg": 17.0,
+      "inverted": false,
+      "min_z": 0.098,
+      "rise": 0.004,
+      "max_air_s": 0.04,
+      "foot_speed": {
+       "left": 1.1,
+       "right": 1.32
+      },
+      "foot_lift": {
+       "left": 0.022,
+       "right": 0.002
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.116,
+      "max_r": 4.15,
+      "speed": 0.684,
+      "fell": true,
+      "steer_deg": 141.0,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.71,
+      "leash_brain_kept": 0.33,
+      "leash_ok": false
+     },
+     {
+      "dist": 3.742,
+      "dx_heading": 3.484,
+      "yaw_change_deg": -87.5,
+      "max_tilt_deg": 16.6,
+      "inverted": false,
+      "min_z": 0.099,
+      "rise": 0.004,
+      "max_air_s": 0.04,
+      "foot_speed": {
+       "left": 1.08,
+       "right": 1.3
+      },
+      "foot_lift": {
+       "left": 0.022,
+       "right": 0.002
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.117,
+      "max_r": 3.77,
+      "speed": 0.624,
+      "fell": true,
+      "steer_deg": 113.8,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.71,
+      "leash_brain_kept": 0.33,
+      "leash_ok": false
+     }
+    ],
+    "ok": 0,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 0.6
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 0.596
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 0.6
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 0.66
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 0.6
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 0.644
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 0.6
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 0.529
+     }
+    ]
+   },
+   "eval_summary": {
+    "speed_mps": 0.66,
+    "dist_6s": 3.962,
+    "fell": 3,
+    "yaw_drift_deg": -73.167,
+    "max_tilt_deg": 16.6,
+    "leash_falls_20s": 6,
+    "leash_max_r": 1.71,
+    "leash_brain_kept": 0.33,
+    "steer_deg": 127.8
+   }
+  },
+  {
+   "id": "roller-sprint",
+   "repo": "pollen-robotics/microduck-roller-sprint-2m-reference",
+   "file": "policy.onnx",
+   "dir": "pollen-robotics__microduck-roller-sprint-2m-reference",
+   "kind": "perpetual",
+   "category": "roller",
+   "variant": "rollers",
+   "duration_s": null,
+   "action_scale": 1.0,
+   "vx": 0.6,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 1,
+   "act_delay": 1,
+   "recurrent": false,
+   "expect": null,
+   "featured": false,
+   "travel_m": null,
+   "name": "roller-sprint-2m-reference",
+   "description": "Pollen's 2 m Roller Sprint reference",
+   "manifest_description": "Pollen's reference for the Microduck Arena's 2 m Roller Sprint: the roller_sprint_2m challenge of microduck-challenges trained unchanged with its recipe (4096 envs, 3000 iterations, seed 1).",
+   "author": "pollen-robotics",
+   "license": "unspecified on the HF card",
+   "hf_sha": "c72fb92594e8b415487e87dfeed509141afc5e25",
+   "status": "fail",
+   "eval": {
+    "trials": [
+     {
+      "dist": 3.856,
+      "dx_heading": 3.745,
+      "yaw_change_deg": -73.1,
+      "max_tilt_deg": 18.6,
+      "inverted": false,
+      "min_z": 0.105,
+      "rise": 0.005,
+      "max_air_s": 0.02,
+      "foot_speed": {
+       "left": 1.23,
+       "right": 1.25
+      },
+      "foot_lift": {
+       "left": 0.017,
+       "right": 0.02
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.111,
+      "max_r": 3.87,
+      "speed": 0.643,
+      "fell": true,
+      "steer_deg": -48.2,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.58,
+      "leash_brain_kept": 0.31,
+      "leash_ok": false
+     },
+     {
+      "dist": 3.742,
+      "dx_heading": 3.625,
+      "yaw_change_deg": -85.5,
+      "max_tilt_deg": 18.1,
+      "inverted": false,
+      "min_z": 0.105,
+      "rise": 0.005,
+      "max_air_s": 0.02,
+      "foot_speed": {
+       "left": 1.21,
+       "right": 1.23
+      },
+      "foot_lift": {
+       "left": 0.017,
+       "right": 0.019
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.11,
+      "max_r": 3.75,
+      "speed": 0.624,
+      "fell": true,
+      "steer_deg": -49.1,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.58,
+      "leash_brain_kept": 0.31,
+      "leash_ok": false
+     },
+     {
+      "dist": 3.485,
+      "dx_heading": 3.263,
+      "yaw_change_deg": -110.8,
+      "max_tilt_deg": 18.2,
+      "inverted": false,
+      "min_z": 0.105,
+      "rise": 0.006,
+      "max_air_s": 0.04,
+      "foot_speed": {
+       "left": 1.18,
+       "right": 1.21
+      },
+      "foot_lift": {
+       "left": 0.016,
+       "right": 0.021
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.112,
+      "max_r": 3.5,
+      "speed": 0.581,
+      "fell": true,
+      "steer_deg": -42.4,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.58,
+      "leash_brain_kept": 0.31,
+      "leash_ok": false
+     }
+    ],
+    "ok": 0,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 0.6
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 0.616
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 0.6
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 0.605
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 0.6
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 0.549
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 0.6
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 0.497
+     }
+    ]
+   },
+   "eval_summary": {
+    "speed_mps": 0.616,
+    "dist_6s": 3.694,
+    "fell": 3,
+    "yaw_drift_deg": -89.8,
+    "max_tilt_deg": 18.3,
+    "leash_falls_20s": 6,
+    "leash_max_r": 1.58,
+    "leash_brain_kept": 0.31,
+    "steer_deg": -46.567
+   }
+  },
+  {
+   "id": "skate",
+   "repo": "jrubiosainz/microduck-game-roller",
+   "file": "policy.onnx",
+   "dir": "jrubiosainz__microduck-game-roller",
+   "kind": "perpetual",
+   "category": "roller",
+   "variant": "rollers",
+   "duration_s": null,
+   "action_scale": 1.0,
+   "vx": 1.4,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 1,
+   "act_delay": 1,
+   "recurrent": false,
+   "expect": null,
+   "featured": false,
+   "travel_m": null,
+   "name": "game-roller",
+   "description": "PPO-tuned roller skater; ignores the command",
+   "manifest_description": "HannesVonEssen's microduck-running policy (Apache-2.0) fine-tuned with PPO on a CPU inside the Arena's own simulator, on roller skates: 1.30 s on the official seeds, 200/200 finishes and 0 falls on seeds 1-200. Ignores the command; simulation only.",
+   "author": "jrubiosainz",
+   "license": "apache-2.0",
+   "hf_sha": "9ecfbaff15648ddeab627097ba39bb008e335260",
+   "status": "fail",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.083,
+      "dx_heading": -0.074,
+      "yaw_change_deg": 15.5,
+      "max_tilt_deg": 120.6,
+      "inverted": true,
+      "min_z": 0.037,
+      "rise": 0.04,
+      "max_air_s": 0.1,
+      "foot_speed": {
+       "left": 105.88,
+       "right": 108.32
+      },
+      "foot_lift": {
+       "left": 0.142,
+       "right": 0.111
+      },
+      "lift_time_s": 0.08,
+      "joint_std": 0.28,
+      "max_r": 2.33,
+      "speed": 0.014,
+      "fell": true,
+      "handback_upright": true
+     },
+     {
+      "dist": 0.083,
+      "dx_heading": -0.074,
+      "yaw_change_deg": 15.1,
+      "max_tilt_deg": 131.2,
+      "inverted": true,
+      "min_z": 0.039,
+      "rise": 0.045,
+      "max_air_s": 0.12,
+      "foot_speed": {
+       "left": 170.15,
+       "right": 167.88
+      },
+      "foot_lift": {
+       "left": 0.156,
+       "right": 0.082
+      },
+      "lift_time_s": 0.3,
+      "joint_std": 0.324,
+      "max_r": 3.43,
+      "speed": 0.014,
+      "fell": true,
+      "handback_upright": true
+     },
+     {
+      "dist": 0.083,
+      "dx_heading": -0.074,
+      "yaw_change_deg": 13.8,
+      "max_tilt_deg": 93.5,
+      "inverted": false,
+      "min_z": 0.037,
+      "rise": 0.042,
+      "max_air_s": 0.12,
+      "foot_speed": {
+       "left": 161.47,
+       "right": 157.47
+      },
+      "foot_lift": {
+       "left": 0.073,
+       "right": 0.019
+      },
+      "lift_time_s": 0.5,
+      "joint_std": 0.355,
+      "max_r": 3.28,
+      "speed": 0.014,
+      "fell": true,
+      "handback_upright": true
+     }
+    ],
+    "ok": 0,
+    "did": 0,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 1.4
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": 0.014
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 1.4
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": 0.014
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 1.4
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": 0.012
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 1.4
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": 0.011
+     }
+    ]
+   },
+   "eval_summary": {
+    "speed_mps": 0.014,
+    "dist_6s": 0.083,
+    "fell": 3,
+    "yaw_drift_deg": 14.8,
+    "max_tilt_deg": 115.1
+   }
+  },
+  {
+   "id": "skate-rev4",
+   "repo": "austindixson/microduck-roller-improver-rev4",
+   "file": "policy.onnx",
+   "dir": "austindixson__microduck-roller-improver-rev4",
+   "kind": "perpetual",
+   "category": "roller",
+   "variant": "rollers",
+   "duration_s": null,
+   "action_scale": 1.0,
+   "vx": 1.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 1,
+   "act_delay": 0,
+   "recurrent": false,
+   "expect": null,
+   "featured": false,
+   "travel_m": null,
+   "name": "roller-improver-rev4",
+   "description": "Roller Sprint remix rev4",
+   "manifest_description": "Roller Sprint remix of jrubiosainz/microduck-game-roller-remix6 (ef9cba565): DenRakEiw senate_duck_0904's seed-5 delta branch ported in (as in our roller-improver v4), plus our seed-1 slot table and a second, independently drawn antithetic-ES step. 0.904 s on the Arena's official seeds. Credit to jr",
+   "author": "austindixson",
+   "license": "unspecified on the HF card",
+   "hf_sha": "34c6858bd7625296c708c67a560038e23dc0a506",
+   "status": "fail",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.094,
+      "dx_heading": -0.025,
+      "yaw_change_deg": -22.0,
+      "max_tilt_deg": 94.6,
+      "inverted": false,
+      "min_z": 0.035,
+      "rise": 0.015,
+      "max_air_s": 0.1,
+      "foot_speed": {
+       "left": 32.47,
+       "right": 24.79
+      },
+      "foot_lift": {
+       "left": 0.022,
+       "right": 0.021
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.168,
+      "max_r": 0.55,
+      "speed": 0.016,
+      "fell": true,
+      "handback_upright": true
+     },
+     {
+      "dist": 0.096,
+      "dx_heading": -0.025,
+      "yaw_change_deg": -22.9,
+      "max_tilt_deg": 100.1,
+      "inverted": false,
+      "min_z": 0.036,
+      "rise": 0.016,
+      "max_air_s": 0.08,
+      "foot_speed": {
+       "left": 29.16,
+       "right": 21.02
+      },
+      "foot_lift": {
+       "left": 0.01,
+       "right": 0.026
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.167,
+      "max_r": 0.51,
+      "speed": 0.016,
+      "fell": true,
+      "handback_upright": true
+     },
+     {
+      "dist": 0.096,
+      "dx_heading": -0.025,
+      "yaw_change_deg": -24.2,
+      "max_tilt_deg": 99.4,
+      "inverted": false,
+      "min_z": 0.036,
+      "rise": 0.016,
+      "max_air_s": 0.08,
+      "foot_speed": {
+       "left": 29.59,
+       "right": 21.67
+      },
+      "foot_lift": {
+       "left": 0.009,
+       "right": 0.026
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.167,
+      "max_r": 0.52,
+      "speed": 0.016,
+      "fell": true,
+      "handback_upright": true
+     }
+    ],
+    "ok": 0,
+    "did": 0,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": 0.012
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": 0.011
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": 0.016
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": 0.015
+     }
+    ]
+   },
+   "eval_summary": {
+    "speed_mps": 0.016,
+    "dist_6s": 0.095,
+    "fell": 3,
+    "yaw_drift_deg": -23.033,
+    "max_tilt_deg": 98.033
+   }
+  },
+  {
+   "id": "climber",
+   "repo": "jrubiosainz/microduck-game-hillclimber-remix5",
+   "file": "policy.onnx",
+   "dir": "jrubiosainz__microduck-game-hillclimber-remix5",
+   "kind": "perpetual",
+   "category": "walk",
+   "variant": "default",
+   "duration_s": null,
+   "action_scale": 1.0,
+   "vx": 0.3,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 1,
+   "recurrent": false,
+   "expect": null,
+   "featured": false,
+   "travel_m": null,
+   "name": "game-hillclimber-remix5",
+   "description": "Arena hill-climb remix",
+   "manifest_description": "1.5 m hill climber: dashi/microduck-hill-remix-r760 (0.760 s) kept bit for bit (dashi's per-seed branch selector over our hillclimber-remix4) plus our own branch for official seed 1, joint-target offsets found by CMA-ES: 0.756 s. Credit to dashi, Muhammadsafi, juicenv, suraj-phanindra, namenu and Po",
+   "author": "jrubiosainz",
+   "license": "unspecified on the HF card",
+   "hf_sha": "7865b3d7c29f411ff7fcb5b8579640833ce27662",
+   "status": "fail",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.505,
+      "dx_heading": 0.46,
+      "yaw_change_deg": 117.5,
+      "max_tilt_deg": 112.6,
+      "inverted": false,
+      "min_z": 0.05,
+      "rise": 0.019,
+      "max_air_s": 0.1,
+      "foot_speed": {
+       "left": 2.06,
+       "right": 2.3
+      },
+      "foot_lift": {
+       "left": 0.183,
+       "right": 0.117
+      },
+      "lift_time_s": 0.08,
+      "joint_std": 0.301,
+      "max_r": 0.53,
+      "speed": 0.084,
+      "fell": true,
+      "handback_upright": true,
+      "leash_falls": 1,
+      "leash_max_r": 0.92,
+      "leash_brain_kept": 0.04,
+      "leash_ok": false
+     },
+     {
+      "dist": 0.0,
+      "dx_heading": 0.0,
+      "yaw_change_deg": 0.5,
+      "max_tilt_deg": 1.5,
+      "inverted": false,
+      "min_z": 0.116,
+      "rise": 0.0,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.0,
+       "right": 0.0
+      },
+      "foot_lift": {
+       "left": 0.0,
+       "right": 0.0
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.001,
+      "max_r": 0.0,
+      "speed": 0.0,
+      "fell": true,
+      "handback_upright": true
+     },
+     {
+      "dist": 0.492,
+      "dx_heading": 0.471,
+      "yaw_change_deg": -89.1,
+      "max_tilt_deg": 115.1,
+      "inverted": false,
+      "min_z": 0.058,
+      "rise": 0.018,
+      "max_air_s": 0.1,
+      "foot_speed": {
+       "left": 2.9,
+       "right": 2.27
+      },
+      "foot_lift": {
+       "left": 0.112,
+       "right": 0.133
+      },
+      "lift_time_s": 0.08,
+      "joint_std": 0.284,
+      "max_r": 0.54,
+      "speed": 0.082,
+      "fell": true,
+      "handback_upright": true,
+      "leash_falls": 1,
+      "leash_max_r": 0.92,
+      "leash_brain_kept": 0.04,
+      "leash_ok": false
+     }
+    ],
+    "ok": 0,
+    "did": 2,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 0.3
+      },
+      "ok": 0,
+      "did": 1,
+      "perf": 0.042
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 0.3
+      },
+      "ok": 0,
+      "did": 2,
+      "perf": 0.055
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 0.3
+      },
+      "ok": 0,
+      "did": 1,
+      "perf": 0.045
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 0.3
+      },
+      "ok": 0,
+      "did": 1,
+      "perf": 0.041
+     }
+    ]
+   },
+   "eval_summary": {
+    "speed_mps": 0.055,
+    "dist_6s": 0.332,
+    "fell": 3,
+    "yaw_drift_deg": 9.633,
+    "max_tilt_deg": 76.4,
+    "leash_falls_20s": 2,
+    "leash_max_r": 0.92,
+    "leash_brain_kept": 0
+   }
+  },
+  {
+   "id": "dashi-remix",
+   "repo": "dashi/microduck-sprint-remix-r856",
+   "file": "policy.onnx",
+   "dir": "dashi__microduck-sprint-remix-r856",
+   "kind": "perpetual",
+   "category": "walk",
+   "variant": "default",
+   "duration_s": null,
+   "action_scale": 1.0,
+   "vx": 1.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 1,
+   "act_delay": 1,
+   "recurrent": false,
+   "expect": null,
+   "featured": false,
+   "travel_m": null,
+   "name": "sprint-remix-r856",
+   "description": "dashi's sprint remix",
+   "manifest_description": "sprint-remix-r856",
+   "author": "dashi",
+   "license": "unspecified on the HF card",
+   "hf_sha": "630de9ce328003cd9238fd4fba72697005ac965d",
+   "status": "fail",
+   "eval": {
+    "trials": [
+     {
+      "dist": 1.478,
+      "dx_heading": 1.473,
+      "yaw_change_deg": -81.5,
+      "max_tilt_deg": 141.3,
+      "inverted": true,
+      "min_z": 0.052,
+      "rise": 0.04,
+      "max_air_s": 0.12,
+      "foot_speed": {
+       "left": 3.09,
+       "right": 3.29
+      },
+      "foot_lift": {
+       "left": 0.126,
+       "right": 0.179
+      },
+      "lift_time_s": 0.6,
+      "joint_std": 0.328,
+      "max_r": 1.54,
+      "speed": 0.246,
+      "fell": true,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.8,
+      "leash_brain_kept": 0.64,
+      "leash_ok": false
+     },
+     {
+      "dist": 2.36,
+      "dx_heading": 2.36,
+      "yaw_change_deg": -117.3,
+      "max_tilt_deg": 143.5,
+      "inverted": true,
+      "min_z": 0.052,
+      "rise": 0.028,
+      "max_air_s": 0.12,
+      "foot_speed": {
+       "left": 3.75,
+       "right": 3.68
+      },
+      "foot_lift": {
+       "left": 0.173,
+       "right": 0.124
+      },
+      "lift_time_s": 0.64,
+      "joint_std": 0.315,
+      "max_r": 2.43,
+      "speed": 0.393,
+      "fell": true,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.8,
+      "leash_brain_kept": 0.64,
+      "leash_ok": false
+     },
+     {
+      "dist": 2.223,
+      "dx_heading": 2.222,
+      "yaw_change_deg": -83.2,
+      "max_tilt_deg": 127.7,
+      "inverted": true,
+      "min_z": 0.059,
+      "rise": 0.032,
+      "max_air_s": 0.14,
+      "foot_speed": {
+       "left": 3.53,
+       "right": 3.45
+      },
+      "foot_lift": {
+       "left": 0.172,
+       "right": 0.142
+      },
+      "lift_time_s": 0.58,
+      "joint_std": 0.352,
+      "max_r": 2.25,
+      "speed": 0.37,
+      "fell": true,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.8,
+      "leash_brain_kept": 0.64,
+      "leash_ok": false
+     }
+    ],
+    "ok": 0,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 0.336
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 0.077
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 0.105
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 2,
+      "perf": 0.049
+     }
+    ]
+   },
+   "eval_summary": {
+    "speed_mps": 0.336,
+    "dist_6s": 2.02,
+    "fell": 3,
+    "yaw_drift_deg": -94.0,
+    "max_tilt_deg": 137.5,
+    "leash_falls_20s": 6,
+    "leash_max_r": 1.8,
+    "leash_brain_kept": 0.64
+   }
+  },
+  {
+   "id": "hill",
+   "repo": "pollen-robotics/microduck-hill-climb-1m5-reference",
+   "file": "policy.onnx",
+   "dir": "pollen-robotics__microduck-hill-climb-1m5-reference",
+   "kind": "perpetual",
+   "category": "walk",
+   "variant": "default",
+   "duration_s": null,
+   "action_scale": 1.0,
+   "vx": 0.5,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 0,
+   "recurrent": false,
+   "expect": null,
+   "featured": true,
+   "travel_m": null,
+   "name": "hill-climb-1m5-reference",
+   "description": "Pollen's 1.5 m Hill Climb reference",
+   "manifest_description": "Pollen's reference for the Microduck Arena's 1.5 m Hill Climb: the hill_climb_1m5 challenge of microduck-challenges trained unchanged with its recipe (4096 envs, 3000 iterations, seed 1); checkpoint 1000, its fastest on the Arena.",
+   "author": "pollen-robotics",
+   "license": "unspecified on the HF card",
+   "hf_sha": "d319208d92896353f581be754f6325d01f5e3732",
+   "status": "pass",
+   "eval": {
+    "trials": [
+     {
+      "dist": 3.431,
+      "dx_heading": 3.406,
+      "yaw_change_deg": 10.2,
+      "max_tilt_deg": 10.4,
+      "inverted": false,
+      "min_z": 0.116,
+      "rise": 0.022,
+      "max_air_s": 0.04,
+      "foot_speed": {
+       "left": 1.81,
+       "right": 1.75
+      },
+      "foot_lift": {
+       "left": 0.025,
+       "right": 0.023
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.142,
+      "max_r": 3.43,
+      "speed": 0.572,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 0,
+      "leash_max_r": 2.06,
+      "leash_brain_kept": 1.0,
+      "leash_ok": true
+     },
+     {
+      "dist": 3.367,
+      "dx_heading": 3.324,
+      "yaw_change_deg": 10.5,
+      "max_tilt_deg": 11.1,
+      "inverted": false,
+      "min_z": 0.116,
+      "rise": 0.02,
+      "max_air_s": 0.06,
+      "foot_speed": {
+       "left": 1.88,
+       "right": 1.68
+      },
+      "foot_lift": {
+       "left": 0.023,
+       "right": 0.023
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.137,
+      "max_r": 3.37,
+      "speed": 0.561,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 0,
+      "leash_max_r": 2.06,
+      "leash_brain_kept": 1.0,
+      "leash_ok": true
+     },
+     {
+      "dist": 3.431,
+      "dx_heading": 3.411,
+      "yaw_change_deg": 4.7,
+      "max_tilt_deg": 10.1,
+      "inverted": false,
+      "min_z": 0.116,
+      "rise": 0.02,
+      "max_air_s": 0.04,
+      "foot_speed": {
+       "left": 1.83,
+       "right": 1.59
+      },
+      "foot_lift": {
+       "left": 0.022,
+       "right": 0.022
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.137,
+      "max_r": 3.43,
+      "speed": 0.572,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 0,
+      "leash_max_r": 2.06,
+      "leash_brain_kept": 1.0,
+      "leash_ok": true
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 0.5
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.386
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 0.5
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.4
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 0.5
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.403
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 0.5
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.568
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 1.0
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.077
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 1.0
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.081
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 1.0
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.067
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 1.0
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.072
+     }
+    ]
+   },
+   "eval_summary": {
+    "speed_mps": 0.568,
+    "dist_6s": 3.41,
+    "fell": 0,
+    "yaw_drift_deg": 8.467,
+    "max_tilt_deg": 10.533,
+    "leash_falls_20s": 0,
+    "leash_max_r": 2.06,
+    "leash_brain_kept": 1.0
+   }
+  },
+  {
+   "id": "hill-fixed",
+   "repo": "RemiFabre/microduck-hill-fixed",
+   "file": "policy.onnx",
+   "dir": "RemiFabre__microduck-hill-fixed",
+   "kind": "perpetual",
+   "category": "walk",
+   "variant": "default",
+   "duration_s": null,
+   "action_scale": 1.0,
+   "vx": 0.6,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 1,
+   "act_delay": 1,
+   "recurrent": false,
+   "expect": null,
+   "featured": false,
+   "travel_m": null,
+   "name": "hill-fixed",
+   "description": "RemiFabre's hill climber",
+   "manifest_description": "Mjlab-HillClimb1m5-MicroDuck",
+   "author": "RemiFabre",
+   "license": "unspecified on the HF card",
+   "hf_sha": "f45c498e21337649d2a47a4c648e3cc9fabaa147",
+   "status": "fail",
+   "eval": {
+    "trials": [
+     {
+      "dist": 8.367,
+      "dx_heading": 7.866,
+      "yaw_change_deg": -40.0,
+      "max_tilt_deg": 12.2,
+      "inverted": false,
+      "min_z": 0.087,
+      "rise": 0.025,
+      "max_air_s": 0.1,
+      "foot_speed": {
+       "left": 2.8,
+       "right": 2.69
+      },
+      "foot_lift": {
+       "left": 0.059,
+       "right": 0.06
+      },
+      "lift_time_s": 5.76,
+      "joint_std": 0.27,
+      "max_r": 8.37,
+      "speed": 1.395,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.94,
+      "leash_brain_kept": 1.0,
+      "leash_ok": false
+     },
+     {
+      "dist": 8.308,
+      "dx_heading": 7.67,
+      "yaw_change_deg": -39.5,
+      "max_tilt_deg": 16.4,
+      "inverted": false,
+      "min_z": 0.087,
+      "rise": 0.027,
+      "max_air_s": 0.1,
+      "foot_speed": {
+       "left": 2.72,
+       "right": 2.7
+      },
+      "foot_lift": {
+       "left": 0.057,
+       "right": 0.062
+      },
+      "lift_time_s": 5.74,
+      "joint_std": 0.271,
+      "max_r": 8.31,
+      "speed": 1.385,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.94,
+      "leash_brain_kept": 1.0,
+      "leash_ok": false
+     },
+     {
+      "dist": 8.405,
+      "dx_heading": 8.038,
+      "yaw_change_deg": -28.3,
+      "max_tilt_deg": 14.1,
+      "inverted": false,
+      "min_z": 0.087,
+      "rise": 0.026,
+      "max_air_s": 0.1,
+      "foot_speed": {
+       "left": 2.79,
+       "right": 2.76
+      },
+      "foot_lift": {
+       "left": 0.059,
+       "right": 0.063
+      },
+      "lift_time_s": 5.7,
+      "joint_std": 0.271,
+      "max_r": 8.41,
+      "speed": 1.401,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.94,
+      "leash_brain_kept": 1.0,
+      "leash_ok": false
+     }
+    ],
+    "ok": 0,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 0.6
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 1.394
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 0.6
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 1.374
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 0.6
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 0.708
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 0.6
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 0.159
+     }
+    ]
+   },
+   "eval_summary": {
+    "speed_mps": 1.394,
+    "dist_6s": 8.36,
+    "fell": 0,
+    "yaw_drift_deg": -35.933,
+    "max_tilt_deg": 14.233,
+    "leash_falls_20s": 6,
+    "leash_max_r": 1.94,
+    "leash_brain_kept": 1.0
+   }
+  },
+  {
+   "id": "nugget",
+   "repo": "hofftv/microduck-nugget-sprint",
+   "file": "policy.onnx",
+   "dir": "hofftv__microduck-nugget-sprint",
+   "kind": "perpetual",
+   "category": "walk",
+   "variant": "default",
+   "duration_s": null,
+   "action_scale": 1.0,
+   "vx": 0.5,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 0,
+   "recurrent": false,
+   "expect": null,
+   "featured": true,
+   "travel_m": null,
+   "name": "nugget-sprint",
+   "description": "Nugget's walk (carry v3) on the 2 m Sprint",
+   "manifest_description": "Nugget's walk (carry v3) on the 2 m Sprint",
+   "author": "hofftv",
+   "license": "unspecified on the HF card",
+   "hf_sha": "f8e476ccc8f52afe48cd38c7dc8cfd32857ccbe3",
+   "status": "pass",
+   "eval": {
+    "trials": [
+     {
+      "dist": 2.052,
+      "dx_heading": 2.038,
+      "yaw_change_deg": 26.0,
+      "max_tilt_deg": 6.0,
+      "inverted": false,
+      "min_z": 0.115,
+      "rise": 0.009,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.95,
+       "right": 0.97
+      },
+      "foot_lift": {
+       "left": 0.015,
+       "right": 0.016
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.097,
+      "max_r": 2.05,
+      "speed": 0.342,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 0,
+      "leash_max_r": 1.94,
+      "leash_brain_kept": 1.0,
+      "leash_ok": true
+     },
+     {
+      "dist": 2.041,
+      "dx_heading": 2.028,
+      "yaw_change_deg": 25.6,
+      "max_tilt_deg": 6.1,
+      "inverted": false,
+      "min_z": 0.115,
+      "rise": 0.009,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.98,
+       "right": 0.97
+      },
+      "foot_lift": {
+       "left": 0.016,
+       "right": 0.016
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.097,
+      "max_r": 2.04,
+      "speed": 0.34,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 0,
+      "leash_max_r": 1.94,
+      "leash_brain_kept": 1.0,
+      "leash_ok": true
+     },
+     {
+      "dist": 2.031,
+      "dx_heading": 2.0,
+      "yaw_change_deg": 30.8,
+      "max_tilt_deg": 5.5,
+      "inverted": false,
+      "min_z": 0.115,
+      "rise": 0.008,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.96,
+       "right": 0.94
+      },
+      "foot_lift": {
+       "left": 0.016,
+       "right": 0.016
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.097,
+      "max_r": 2.03,
+      "speed": 0.339,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 0,
+      "leash_max_r": 1.94,
+      "leash_brain_kept": 1.0,
+      "leash_ok": true
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 0.5
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.313
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 0.5
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.312
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 0.5
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.316
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 0.5
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.34
+     }
+    ]
+   },
+   "eval_summary": {
+    "speed_mps": 0.34,
+    "dist_6s": 2.041,
+    "fell": 0,
+    "yaw_drift_deg": 27.467,
+    "max_tilt_deg": 5.867,
+    "leash_falls_20s": 0,
+    "leash_max_r": 1.94,
+    "leash_brain_kept": 1.0
+   }
+  },
+  {
+   "id": "nugget-hill",
+   "repo": "hofftv/microduck-nugget-hill",
+   "file": "policy.onnx",
+   "dir": "hofftv__microduck-nugget-hill",
+   "kind": "perpetual",
+   "category": "walk",
+   "variant": "default",
+   "duration_s": null,
+   "action_scale": 1.0,
+   "vx": 0.4,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 1,
+   "recurrent": false,
+   "expect": null,
+   "featured": false,
+   "travel_m": null,
+   "name": "nugget-hill",
+   "description": "Nugget's steady walk on the Hill Climb",
+   "manifest_description": "Nugget's steady walk (carry v3) on the 1.5 m Hill Climb",
+   "author": "hofftv",
+   "license": "unspecified on the HF card",
+   "hf_sha": "c8ab39340d852888fdd84f65208de6ea5ea718a1",
+   "status": "pass",
+   "eval": {
+    "trials": [
+     {
+      "dist": 1.685,
+      "dx_heading": 1.632,
+      "yaw_change_deg": 44.2,
+      "max_tilt_deg": 3.5,
+      "inverted": false,
+      "min_z": 0.114,
+      "rise": 0.007,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.74,
+       "right": 0.78
+      },
+      "foot_lift": {
+       "left": 0.013,
+       "right": 0.017
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.109,
+      "max_r": 1.69,
+      "speed": 0.281,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 0,
+      "leash_max_r": 1.94,
+      "leash_brain_kept": 1.0,
+      "leash_ok": true
+     },
+     {
+      "dist": 1.678,
+      "dx_heading": 1.613,
+      "yaw_change_deg": 43.8,
+      "max_tilt_deg": 3.7,
+      "inverted": false,
+      "min_z": 0.114,
+      "rise": 0.007,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.74,
+       "right": 0.76
+      },
+      "foot_lift": {
+       "left": 0.013,
+       "right": 0.017
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.11,
+      "max_r": 1.68,
+      "speed": 0.28,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 0,
+      "leash_max_r": 1.94,
+      "leash_brain_kept": 1.0,
+      "leash_ok": true
+     },
+     {
+      "dist": 1.668,
+      "dx_heading": 1.613,
+      "yaw_change_deg": 40.0,
+      "max_tilt_deg": 3.8,
+      "inverted": false,
+      "min_z": 0.114,
+      "rise": 0.007,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.74,
+       "right": 0.76
+      },
+      "foot_lift": {
+       "left": 0.013,
+       "right": 0.017
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.11,
+      "max_r": 1.67,
+      "speed": 0.278,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 0,
+      "leash_max_r": 1.94,
+      "leash_brain_kept": 1.0,
+      "leash_ok": true
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 0.4
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.272
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 0.4
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.28
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 0.4
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.267
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 0.4
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.276
+     }
+    ]
+   },
+   "eval_summary": {
+    "speed_mps": 0.28,
+    "dist_6s": 1.677,
+    "fell": 0,
+    "yaw_drift_deg": 42.667,
+    "max_tilt_deg": 3.667,
+    "leash_falls_20s": 0,
+    "leash_max_r": 1.94,
+    "leash_brain_kept": 1.0
+   }
+  },
+  {
+   "id": "nugget-trot",
+   "repo": "hofftv/microduck-nugget-hill-walk",
+   "file": "policy.onnx",
+   "dir": "hofftv__microduck-nugget-hill-walk",
+   "kind": "perpetual",
+   "category": "walk",
+   "variant": "default",
+   "duration_s": null,
+   "action_scale": 1.0,
+   "vx": 0.4,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 0,
+   "recurrent": false,
+   "expect": null,
+   "featured": false,
+   "travel_m": null,
+   "name": "nugget-hill-walk",
+   "description": "Nugget's quick walk on the Hill Climb",
+   "manifest_description": "Nugget's quick walk on the 1.5 m Hill Climb",
+   "author": "hofftv",
+   "license": "unspecified on the HF card",
+   "hf_sha": "bf3249daae76510a2a74da2720b930ae5ee91706",
+   "status": "pass",
+   "eval": {
+    "trials": [
+     {
+      "dist": 1.652,
+      "dx_heading": 1.629,
+      "yaw_change_deg": 22.9,
+      "max_tilt_deg": 4.8,
+      "inverted": false,
+      "min_z": 0.114,
+      "rise": 0.01,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.73,
+       "right": 0.76
+      },
+      "foot_lift": {
+       "left": 0.015,
+       "right": 0.014
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.077,
+      "max_r": 1.65,
+      "speed": 0.275,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 0,
+      "leash_max_r": 1.97,
+      "leash_brain_kept": 1.0,
+      "leash_ok": true
+     },
+     {
+      "dist": 1.643,
+      "dx_heading": 1.607,
+      "yaw_change_deg": 32.2,
+      "max_tilt_deg": 5.4,
+      "inverted": false,
+      "min_z": 0.114,
+      "rise": 0.01,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.75,
+       "right": 0.78
+      },
+      "foot_lift": {
+       "left": 0.015,
+       "right": 0.015
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.078,
+      "max_r": 1.64,
+      "speed": 0.274,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 0,
+      "leash_max_r": 1.97,
+      "leash_brain_kept": 1.0,
+      "leash_ok": true
+     },
+     {
+      "dist": 1.647,
+      "dx_heading": 1.633,
+      "yaw_change_deg": 15.0,
+      "max_tilt_deg": 5.4,
+      "inverted": false,
+      "min_z": 0.115,
+      "rise": 0.01,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.76,
+       "right": 0.78
+      },
+      "foot_lift": {
+       "left": 0.015,
+       "right": 0.014
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.078,
+      "max_r": 1.65,
+      "speed": 0.275,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 0,
+      "leash_max_r": 1.97,
+      "leash_brain_kept": 1.0,
+      "leash_ok": true
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 0.4
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.252
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 0.4
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.27
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 0.4
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.262
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 0.4
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.275
+     }
+    ]
+   },
+   "eval_summary": {
+    "speed_mps": 0.275,
+    "dist_6s": 1.647,
+    "fell": 0,
+    "yaw_drift_deg": 23.367,
+    "max_tilt_deg": 5.2,
+    "leash_falls_20s": 0,
+    "leash_max_r": 1.97,
+    "leash_brain_kept": 1.0
+   }
+  },
+  {
+   "id": "sprint",
+   "repo": "pollen-robotics/microduck-sprint-2m-reference",
+   "file": "policy.onnx",
+   "dir": "pollen-robotics__microduck-sprint-2m-reference",
+   "kind": "perpetual",
+   "category": "walk",
+   "variant": "default",
+   "duration_s": null,
+   "action_scale": 1.0,
+   "vx": 0.55,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 0,
+   "act_delay": 0,
+   "recurrent": false,
+   "expect": null,
+   "featured": true,
+   "travel_m": null,
+   "name": "sprint-2m-reference",
+   "description": "Pollen's 2 m Sprint reference",
+   "manifest_description": "Pollen's reference for the Microduck Arena's 2 m Sprint: the sprint_2m challenge of microduck-challenges trained unchanged with its recipe (4096 envs, 3000 iterations, seed 1); checkpoint 1000, its fastest on the Arena.",
+   "author": "pollen-robotics",
+   "license": "unspecified on the HF card",
+   "hf_sha": "62afcc461f1d4a5ac22bfbff55ce4900c1afba32",
+   "status": "pass",
+   "eval": {
+    "trials": [
+     {
+      "dist": 3.259,
+      "dx_heading": 3.252,
+      "yaw_change_deg": 3.5,
+      "max_tilt_deg": 11.0,
+      "inverted": false,
+      "min_z": 0.115,
+      "rise": 0.026,
+      "max_air_s": 0.06,
+      "foot_speed": {
+       "left": 1.7,
+       "right": 1.81
+      },
+      "foot_lift": {
+       "left": 0.027,
+       "right": 0.025
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.16,
+      "max_r": 3.26,
+      "speed": 0.543,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 0,
+      "leash_max_r": 2.03,
+      "leash_brain_kept": 1.0,
+      "leash_ok": true
+     },
+     {
+      "dist": 2.942,
+      "dx_heading": 2.942,
+      "yaw_change_deg": 8.8,
+      "max_tilt_deg": 9.7,
+      "inverted": false,
+      "min_z": 0.115,
+      "rise": 0.024,
+      "max_air_s": 0.06,
+      "foot_speed": {
+       "left": 1.51,
+       "right": 1.65
+      },
+      "foot_lift": {
+       "left": 0.026,
+       "right": 0.028
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.147,
+      "max_r": 2.94,
+      "speed": 0.49,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 0,
+      "leash_max_r": 2.03,
+      "leash_brain_kept": 1.0,
+      "leash_ok": true
+     },
+     {
+      "dist": 3.061,
+      "dx_heading": 3.06,
+      "yaw_change_deg": 6.5,
+      "max_tilt_deg": 9.0,
+      "inverted": false,
+      "min_z": 0.114,
+      "rise": 0.024,
+      "max_air_s": 0.04,
+      "foot_speed": {
+       "left": 1.55,
+       "right": 1.85
+      },
+      "foot_lift": {
+       "left": 0.027,
+       "right": 0.024
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.152,
+      "max_r": 3.06,
+      "speed": 0.51,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 0,
+      "leash_max_r": 2.03,
+      "leash_brain_kept": 1.0,
+      "leash_ok": true
+     }
+    ],
+    "ok": 3,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 0.55
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.386
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 0.55
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.38
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 0.55
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.395
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 0.55
+      },
+      "ok": 3,
+      "did": 3,
+      "perf": 0.514
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": 0.029
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": 0.036
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": 0.029
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 0,
+      "perf": 0.028
+     }
+    ]
+   },
+   "eval_summary": {
+    "speed_mps": 0.514,
+    "dist_6s": 3.087,
+    "fell": 0,
+    "yaw_drift_deg": 6.267,
+    "max_tilt_deg": 9.9,
+    "leash_falls_20s": 0,
+    "leash_max_r": 2.03,
+    "leash_brain_kept": 1.0
+   }
+  },
+  {
+   "id": "sprint-fixed",
+   "repo": "RemiFabre/microduck-sprint-fixed",
+   "file": "policy.onnx",
+   "dir": "RemiFabre__microduck-sprint-fixed",
+   "kind": "perpetual",
+   "category": "walk",
+   "variant": "default",
+   "duration_s": null,
+   "action_scale": 1.0,
+   "vx": 0.8,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 1,
+   "act_delay": 1,
+   "recurrent": false,
+   "expect": null,
+   "featured": false,
+   "travel_m": null,
+   "name": "sprint-fixed",
+   "description": "RemiFabre's 'unleashed-calm' sprinter",
+   "manifest_description": "Mjlab-Sprint2m-MicroDuck",
+   "author": "RemiFabre",
+   "license": "unspecified on the HF card",
+   "hf_sha": "7268f37b737400a47bf9937a3cdef5e1be8b4d9f",
+   "status": "fail",
+   "eval": {
+    "trials": [
+     {
+      "dist": 9.891,
+      "dx_heading": 9.656,
+      "yaw_change_deg": -39.7,
+      "max_tilt_deg": 13.1,
+      "inverted": false,
+      "min_z": 0.084,
+      "rise": 0.03,
+      "max_air_s": 0.12,
+      "foot_speed": {
+       "left": 3.14,
+       "right": 3.16
+      },
+      "foot_lift": {
+       "left": 0.071,
+       "right": 0.063
+      },
+      "lift_time_s": 5.22,
+      "joint_std": 0.293,
+      "max_r": 9.89,
+      "speed": 1.649,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 3,
+      "leash_max_r": 2.0,
+      "leash_brain_kept": 1.0,
+      "leash_ok": false
+     },
+     {
+      "dist": 10.089,
+      "dx_heading": 10.058,
+      "yaw_change_deg": -27.7,
+      "max_tilt_deg": 14.3,
+      "inverted": false,
+      "min_z": 0.084,
+      "rise": 0.031,
+      "max_air_s": 0.14,
+      "foot_speed": {
+       "left": 3.23,
+       "right": 3.18
+      },
+      "foot_lift": {
+       "left": 0.069,
+       "right": 0.069
+      },
+      "lift_time_s": 5.28,
+      "joint_std": 0.295,
+      "max_r": 10.09,
+      "speed": 1.681,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 3,
+      "leash_max_r": 2.0,
+      "leash_brain_kept": 1.0,
+      "leash_ok": false
+     },
+     {
+      "dist": 10.104,
+      "dx_heading": 10.058,
+      "yaw_change_deg": -30.4,
+      "max_tilt_deg": 14.6,
+      "inverted": false,
+      "min_z": 0.084,
+      "rise": 0.033,
+      "max_air_s": 0.12,
+      "foot_speed": {
+       "left": 3.13,
+       "right": 3.18
+      },
+      "foot_lift": {
+       "left": 0.07,
+       "right": 0.062
+      },
+      "lift_time_s": 5.3,
+      "joint_std": 0.297,
+      "max_r": 10.11,
+      "speed": 1.684,
+      "fell": false,
+      "handback_upright": true,
+      "leash_falls": 3,
+      "leash_max_r": 2.0,
+      "leash_brain_kept": 1.0,
+      "leash_ok": false
+     }
+    ],
+    "ok": 0,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 0.8
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 1.671
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 0.8
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 1.421
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 0.8
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 0.479
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 0.8
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 0.222
+     }
+    ]
+   },
+   "eval_summary": {
+    "speed_mps": 1.671,
+    "dist_6s": 10.028,
+    "fell": 0,
+    "yaw_drift_deg": -32.6,
+    "max_tilt_deg": 14.0,
+    "leash_falls_20s": 9,
+    "leash_max_r": 2.0,
+    "leash_brain_kept": 1.0
+   }
+  },
+  {
+   "id": "sprint-rev5",
+   "repo": "austindixson/microduck-sprint-improver-rev5",
+   "file": "policy.onnx",
+   "dir": "austindixson__microduck-sprint-improver-rev5",
+   "kind": "perpetual",
+   "category": "walk",
+   "variant": "default",
+   "duration_s": null,
+   "action_scale": 1.0,
+   "vx": 1.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 1,
+   "act_delay": 1,
+   "recurrent": false,
+   "expect": null,
+   "featured": false,
+   "travel_m": null,
+   "name": "sprint-improver-rev5",
+   "description": "austindixson's sprint improver rev5",
+   "manifest_description": "Sprint 2 m remix of austindixson/microduck-sprint-improver-rev2 (2eafef86d): physics-searched seed-1 snap plus a closed-loop CMA settle delta at half scale on the seed-1 branch table. 0.840 s on the Arena's official seeds. Credit to jrubiosainz, DenRakEiw, dashi and the authors they credit, and to P",
+   "author": "austindixson",
+   "license": "unspecified on the HF card",
+   "hf_sha": "22a826f7aaf25e2f4c93acb721eac06937a5b326",
+   "status": "fail",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.0,
+      "dx_heading": 0.0,
+      "yaw_change_deg": 0.8,
+      "max_tilt_deg": 1.6,
+      "inverted": false,
+      "min_z": 0.116,
+      "rise": 0.0,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.0,
+       "right": 0.0
+      },
+      "foot_lift": {
+       "left": 0.0,
+       "right": 0.0
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.001,
+      "max_r": 0.0,
+      "speed": 0.0,
+      "fell": true,
+      "handback_upright": true
+     },
+     {
+      "dist": 2.464,
+      "dx_heading": 2.464,
+      "yaw_change_deg": -142.0,
+      "max_tilt_deg": 144.3,
+      "inverted": true,
+      "min_z": 0.051,
+      "rise": 0.028,
+      "max_air_s": 0.12,
+      "foot_speed": {
+       "left": 3.75,
+       "right": 3.67
+      },
+      "foot_lift": {
+       "left": 0.168,
+       "right": 0.118
+      },
+      "lift_time_s": 0.64,
+      "joint_std": 0.336,
+      "max_r": 2.48,
+      "speed": 0.411,
+      "fell": true,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.83,
+      "leash_brain_kept": 0.65,
+      "leash_ok": false
+     },
+     {
+      "dist": 1.824,
+      "dx_heading": 1.823,
+      "yaw_change_deg": -39.5,
+      "max_tilt_deg": 124.7,
+      "inverted": true,
+      "min_z": 0.058,
+      "rise": 0.051,
+      "max_air_s": 0.16,
+      "foot_speed": {
+       "left": 3.77,
+       "right": 3.63
+      },
+      "foot_lift": {
+       "left": 0.233,
+       "right": 0.128
+      },
+      "lift_time_s": 0.58,
+      "joint_std": 0.322,
+      "max_r": 2.04,
+      "speed": 0.304,
+      "fell": true,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.83,
+      "leash_brain_kept": 0.65,
+      "leash_ok": false
+     }
+    ],
+    "ok": 0,
+    "did": 2,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 2,
+      "perf": 0.238
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 2,
+      "perf": 0.056
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 2,
+      "perf": 0.056
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 2,
+      "perf": 0.038
+     }
+    ]
+   },
+   "eval_summary": {
+    "speed_mps": 0.238,
+    "dist_6s": 1.429,
+    "fell": 3,
+    "yaw_drift_deg": -60.233,
+    "max_tilt_deg": 90.2
+   }
+  },
+  {
+   "id": "zoom",
+   "repo": "jrubiosainz/microduck-game-sprinter",
+   "file": "policy.onnx",
+   "dir": "jrubiosainz__microduck-game-sprinter",
+   "kind": "perpetual",
+   "category": "walk",
+   "variant": "default",
+   "duration_s": null,
+   "action_scale": 1.0,
+   "vx": 1.0,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 1,
+   "act_delay": 1,
+   "recurrent": false,
+   "expect": null,
+   "featured": false,
+   "travel_m": null,
+   "name": "game-sprinter",
+   "description": "PPO-tuned runner (HannesVonEssen's running policy, fine-tuned); ignores the command",
+   "manifest_description": "HannesVonEssen's microduck-running policy (Apache-2.0) fine-tuned with PPO on a CPU inside the Arena's own simulator: 1.05 s on the official seeds, 200/200 finishes and 0 falls on seeds 1-200. Ignores the command; simulation only.",
+   "author": "jrubiosainz",
+   "license": "apache-2.0",
+   "hf_sha": "598b25a213a38aaebeff5d016ed71793d85c2512",
+   "status": "fail",
+   "eval": {
+    "trials": [
+     {
+      "dist": 4.085,
+      "dx_heading": 4.085,
+      "yaw_change_deg": 11.2,
+      "max_tilt_deg": 86.7,
+      "inverted": false,
+      "min_z": 0.072,
+      "rise": 0.041,
+      "max_air_s": 0.12,
+      "foot_speed": {
+       "left": 3.57,
+       "right": 3.65
+      },
+      "foot_lift": {
+       "left": 0.077,
+       "right": 0.156
+      },
+      "lift_time_s": 1.22,
+      "joint_std": 0.396,
+      "max_r": 4.22,
+      "speed": 0.681,
+      "fell": true,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.69,
+      "leash_brain_kept": 0.64,
+      "leash_ok": false
+     },
+     {
+      "dist": 4.198,
+      "dx_heading": 4.197,
+      "yaw_change_deg": -108.6,
+      "max_tilt_deg": 149.7,
+      "inverted": true,
+      "min_z": 0.056,
+      "rise": 0.046,
+      "max_air_s": 0.12,
+      "foot_speed": {
+       "left": 3.81,
+       "right": 3.57
+      },
+      "foot_lift": {
+       "left": 0.185,
+       "right": 0.188
+      },
+      "lift_time_s": 1.12,
+      "joint_std": 0.379,
+      "max_r": 4.25,
+      "speed": 0.7,
+      "fell": true,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.69,
+      "leash_brain_kept": 0.64,
+      "leash_ok": false
+     },
+     {
+      "dist": 3.855,
+      "dx_heading": 3.853,
+      "yaw_change_deg": -31.0,
+      "max_tilt_deg": 131.4,
+      "inverted": true,
+      "min_z": 0.055,
+      "rise": 0.032,
+      "max_air_s": 0.1,
+      "foot_speed": {
+       "left": 3.54,
+       "right": 3.63
+      },
+      "foot_lift": {
+       "left": 0.13,
+       "right": 0.147
+      },
+      "lift_time_s": 0.98,
+      "joint_std": 0.4,
+      "max_r": 4.08,
+      "speed": 0.642,
+      "fell": true,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.69,
+      "leash_brain_kept": 0.64,
+      "leash_ok": false
+     }
+    ],
+    "ok": 0,
+    "did": 3,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 0.674
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 0.18
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 1,
+      "perf": 0.041
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 1.0
+      },
+      "ok": 0,
+      "did": 3,
+      "perf": 0.087
+     }
+    ]
+   },
+   "eval_summary": {
+    "speed_mps": 0.674,
+    "dist_6s": 4.046,
+    "fell": 3,
+    "yaw_drift_deg": -42.8,
+    "max_tilt_deg": 122.6,
+    "leash_falls_20s": 6,
+    "leash_max_r": 1.69,
+    "leash_brain_kept": 0.64
+   }
+  },
+  {
+   "id": "zoom-remix",
+   "repo": "jrubiosainz/microduck-game-sprinter-remix4",
+   "file": "policy.onnx",
+   "dir": "jrubiosainz__microduck-game-sprinter-remix4",
+   "kind": "perpetual",
+   "category": "walk",
+   "variant": "default",
+   "duration_s": null,
+   "action_scale": 1.0,
+   "vx": 1.15,
+   "cmd": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cmd_seq": null,
+   "phase": null,
+   "jv_lag": 1,
+   "act_delay": 1,
+   "recurrent": false,
+   "expect": null,
+   "featured": false,
+   "travel_m": null,
+   "name": "game-sprinter-remix4",
+   "description": "Arena sprint remix with per-seed branch tables",
+   "manifest_description": "2 m sprinter: dashi/microduck-sprint-remix-r844 (0.844 s) kept bit for bit (dashi's per-seed branch selector over our sprinter-remix3) plus our own branch for official seed 5, joint-target offsets found by CMA-ES: 0.840 s. Credit to dashi, Muhammadsafi, suraj-phanindra, juicenv, namenu and Pollen Ro",
+   "author": "jrubiosainz",
+   "license": "unspecified on the HF card",
+   "hf_sha": "175eba5581c9cbc038588ff1a1f406afc2e3a446",
+   "status": "fail",
+   "eval": {
+    "trials": [
+     {
+      "dist": 0.0,
+      "dx_heading": 0.0,
+      "yaw_change_deg": 0.8,
+      "max_tilt_deg": 1.6,
+      "inverted": false,
+      "min_z": 0.116,
+      "rise": 0.0,
+      "max_air_s": 0.0,
+      "foot_speed": {
+       "left": 0.0,
+       "right": 0.0
+      },
+      "foot_lift": {
+       "left": 0.0,
+       "right": 0.0
+      },
+      "lift_time_s": 0.0,
+      "joint_std": 0.001,
+      "max_r": 0.0,
+      "speed": 0.0,
+      "fell": true,
+      "handback_upright": true
+     },
+     {
+      "dist": 2.47,
+      "dx_heading": 2.47,
+      "yaw_change_deg": -118.3,
+      "max_tilt_deg": 153.0,
+      "inverted": true,
+      "min_z": 0.05,
+      "rise": 0.028,
+      "max_air_s": 0.1,
+      "foot_speed": {
+       "left": 3.78,
+       "right": 3.63
+      },
+      "foot_lift": {
+       "left": 0.156,
+       "right": 0.14
+      },
+      "lift_time_s": 0.64,
+      "joint_std": 0.35,
+      "max_r": 2.52,
+      "speed": 0.412,
+      "fell": true,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.79,
+      "leash_brain_kept": 0.6,
+      "leash_ok": false
+     },
+     {
+      "dist": 2.305,
+      "dx_heading": 2.302,
+      "yaw_change_deg": -131.4,
+      "max_tilt_deg": 113.5,
+      "inverted": false,
+      "min_z": 0.05,
+      "rise": 0.03,
+      "max_air_s": 0.1,
+      "foot_speed": {
+       "left": 3.35,
+       "right": 3.73
+      },
+      "foot_lift": {
+       "left": 0.141,
+       "right": 0.117
+      },
+      "lift_time_s": 0.58,
+      "joint_std": 0.317,
+      "max_r": 2.35,
+      "speed": 0.384,
+      "fell": true,
+      "handback_upright": true,
+      "leash_falls": 2,
+      "leash_max_r": 1.79,
+      "leash_brain_kept": 0.6,
+      "leash_ok": false
+     }
+    ],
+    "ok": 0,
+    "did": 2,
+    "n": 3,
+    "configs": [
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 1,
+       "vx": 1.15
+      },
+      "ok": 0,
+      "did": 2,
+      "perf": 0.265
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 1,
+       "vx": 1.15
+      },
+      "ok": 0,
+      "did": 2,
+      "perf": 0.074
+     },
+     {
+      "cfg": {
+       "jv_lag": 1,
+       "act_delay": 0,
+       "vx": 1.15
+      },
+      "ok": 0,
+      "did": 2,
+      "perf": 0.065
+     },
+     {
+      "cfg": {
+       "jv_lag": 0,
+       "act_delay": 0,
+       "vx": 1.15
+      },
+      "ok": 0,
+      "did": 1,
+      "perf": 0.032
+     }
+    ]
+   },
+   "eval_summary": {
+    "speed_mps": 0.265,
+    "dist_6s": 1.592,
+    "fell": 3,
+    "yaw_drift_deg": -82.967,
+    "max_tilt_deg": 89.367
+   }
+  }
+ ]
+}

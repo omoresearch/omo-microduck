@@ -1,0 +1,7 @@
+# Sidecar runtime (tested: Python 3.12-3.14, mujoco 3.17, onnxruntime 1.31)
+mujoco>=3.3
+numpy>=2.0
+onnxruntime>=1.20
+fast_simplification>=0.1.7   # model_export.py mesh decimation (first run only, then cached)
+colorama            # used by better-actuator-models
+# better-actuator-models (BAM, mjlab_frictionloss branch) is installed by setup.sh with --no-deps

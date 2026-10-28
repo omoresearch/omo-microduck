@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "microduck",
+  "version": "1.0.0",
+  "name": "Omo Microduck",
+  "description": "A real, physics-simulated Pollen Robotics Microduck walking around your Minecraft world: MuJoCo + the actual RL policies in a local sidecar, rendered articulated in-game. By Omo Research.",
+  "authors": [
+    "Omo Research"
+  ],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.yifan.microduck.MicroDuck"
+    ],
+    "voicechat": [
+      "dev.yifan.microduck.DuckVoicePlugin"
+    ]
+  },
+  "suggests": {
+    "voicechat": ">=2.6.0"
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "fabric-api": "*",
+    "minecraft": "~26.2"
+  },
+  "contact": {
+    "homepage": "https://www.omo.sh",
+    "sources": "https://github.com/omoresearch/omo-microduck",
+    "issues": "https://github.com/omoresearch/omo-microduck/issues"
+  }
+}

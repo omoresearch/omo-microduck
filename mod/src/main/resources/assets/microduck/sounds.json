@@ -1,0 +1,10 @@
+{
+  "quack": {
+    "subtitle": "subtitles.microduck.quack",
+    "sounds": [
+      {"name": "microduck:quack1", "attenuation_distance": 24},
+      {"name": "microduck:quack2", "attenuation_distance": 24},
+      {"name": "microduck:quack3", "attenuation_distance": 24}
+    ]
+  }
+}
