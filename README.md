@@ -2,7 +2,7 @@
   <img src="docs/media/hero.png" alt="Omo Microduck: a real robot duck, alive in Minecraft" width="100%">
 </p>
 
-<h1 align="center">A real robot duck, alive in Minecraft.</h1>
+<h1 align="center">Omo Microduck</h1>
 
 <p align="center">
   Not a mob. Not an animation. The actual open-source <b>Pollen Robotics Microduck</b>,<br>
@@ -55,7 +55,7 @@ they have a body, a place and a voice. Omo Microduck is that idea at duck scale.
 
 ## What it does
 
-| | |
+| Feature | What you get |
 |---|---|
 | **Real robot, real physics** | Pollen Robotics' Microduck MJCF and meshes, the BAM XL330 servo model, 2° gear backlash, MuJoCo at 200 Hz physics / 50 Hz policy, on one CPU core. |
 | **Real brains** | Pollen's pretrained ONNX policies for walking, turning, sitting, standing and getting up after a fall. No animation files anywhere. |
@@ -137,20 +137,22 @@ and an unambiguous prefix works (`!duck zip walk`).
 
 ```mermaid
 flowchart LR
-  subgraph MC["Minecraft (Fabric client mod)"]
-    R["Renderer<br/>25.5k tris, 25 Hz poses,<br/>interpolated per frame"]
-    T["Terrain scan<br/>blocks to boxes"]
+  subgraph MC["Minecraft: Fabric client mod"]
+    direction TB
     C["!duck chat"]
+    T["Terrain scan"]
+    R["Renderer, 25.5k tris"]
   end
-  subgraph S["Sidecar (Python, 127.0.0.1:8796)"]
-    P["ONNX policies<br/>velstand / sitstand / brains"]
-    M["MuJoCo<br/>Microduck + BAM servos"]
-    P -->|joint targets, 50 Hz| M
-    M -->|61-D observation| P
+  subgraph S["Sidecar: Python on 127.0.0.1:8796"]
+    direction TB
+    P["ONNX policy"]
+    M["MuJoCo + BAM servos"]
   end
-  M -->|"/poses"| R
-  T -->|"/terrain"| M
   C -->|"/cmd"| P
+  T -->|"/terrain"| M
+  P -->|"joint targets, 50 Hz"| M
+  M -->|"61-D observation"| P
+  M -->|"/poses, 25 Hz"| R
 ```
 
 - **Sidecar** (`sidecar/`): one Python process steps every duck at a fixed 50 Hz
@@ -221,6 +223,6 @@ The community brains are by their Hugging Face authors. Full list in
 MICROSOFT.** Not affiliated with Pollen Robotics.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/omoresearch/.github/main/assets/omo-unbound.png" width="56" alt="Omo Research">
+  <a href="https://www.omo.sh"><img src="docs/media/omo-icon.png" width="56" alt="Omo Research"></a>
   <br><sub><i>The next interface isn't a chat window.</i> · Omo Research · <a href="https://www.omo.sh">omo.sh</a></sub>
 </p>
