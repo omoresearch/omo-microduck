@@ -1,6 +1,7 @@
-<p align="center">
-  <img src="docs/media/hero.png" alt="Omo Microduck: a real robot duck, alive in Minecraft" width="100%">
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/media/hero-dark.png">
+  <img src="docs/media/hero.png" alt="Omo Microduck: a real robot duck, alive in Minecraft. One of the flock in the Omo Space duck lab, an in-game frame from the stream." width="100%">
+</picture>
 
 <h1 align="center">Omo Microduck</h1>
 
@@ -10,13 +11,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/omoresearch/omo-microduck/releases/latest"><b>Download v1.0.0</b></a>
-  &nbsp;·&nbsp;
-  <a href="#quick-start">Quick start</a>
-  &nbsp;·&nbsp;
-  <a href="#how-it-works">How it works</a>
-  &nbsp;·&nbsp;
-  <a href="https://www.omo.sh">omo.sh</a>
+  <a href="https://github.com/omoresearch/omo-microduck/releases/latest"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/media/btn-download-dark.png"><img src="docs/media/btn-download.png" alt="Download v1.0.0" height="43"></picture></a>&nbsp;
+  <a href="#straight-from-the-stream"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/media/btn-reels-dark.png"><img src="docs/media/btn-reels.png" alt="Watch the reels" height="43"></picture></a>&nbsp;
+  <a href="#quick-start"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/media/btn-start-dark.png"><img src="docs/media/btn-start.png" alt="Quick start" height="43"></picture></a>&nbsp;
+  <a href="https://www.omo.sh"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/media/btn-omo-dark.png"><img src="docs/media/btn-omo.png" alt="omo.sh" height="43"></picture></a>
 </p>
 
 <p align="center">
@@ -27,16 +25,22 @@
   <img alt="licence MIT" src="https://img.shields.io/badge/licence-MIT-1a1008?style=flat-square&labelColor=4a3b2f">
 </p>
 
----
+<br>
+
+## Straight from the stream
+
+Three reels cut from our live stream, with nothing re-staged: the stream camera,
+a real play session, the real duck. The loops here are silent; the full reels
+have sound.
 
 <table>
 <tr>
-<td width="50%"><img src="docs/media/duck-walk.gif" alt="The Microduck walking and turning, driven by Pollen's velstand policy"></td>
-<td width="50%"><img src="docs/media/duck-tricks.gif" alt="Community brains: forward roll, hop and dance"></td>
-</tr>
-<tr>
-<td align="center"><sub><b>It walks because it learned to.</b> Pollen's <code>velstand</code> policy, 50 times a second.</sub></td>
-<td align="center"><sub><b>And it learns new tricks.</b> Rolls, hops, dances: community brains from Hugging Face.</sub></td>
+<td width="33%" valign="top"><a href="https://github.com/omoresearch/omo-microduck/releases/download/v1.0.0/microduck-reel-secret-lab.mp4"><img src="docs/media/reel-secret-lab.webp" alt="Reel: the flock in the secret duck lab sits, nods and stands up on command"></a>
+<p><sub><b>The secret lab.</b><br>The flock lives under the base. Ask them to sit, nod and stand, then put plant pots in their way: real physics, real falls.<br><a href="https://github.com/omoresearch/omo-microduck/releases/download/v1.0.0/microduck-reel-secret-lab.mp4">Full reel</a> · <a href="https://www.instagram.com/reel/DfBYnJViObx/">Instagram</a></sub></p></td>
+<td width="33%" valign="top"><a href="https://github.com/omoresearch/omo-microduck/releases/download/v1.0.0/microduck-reel-stairs.mp4"><img src="docs/media/reel-stairs.webp" alt="Reel: the Microduck falls over on Minecraft stairs"></a>
+<p><sub><b>Then it met Minecraft stairs.</b><br>It learned to walk in simulation. It can't climb stairs, so down it goes, and <code>!duck here</code> brings it back.<br><a href="https://github.com/omoresearch/omo-microduck/releases/download/v1.0.0/microduck-reel-stairs.mp4">Full reel</a> · <a href="https://www.instagram.com/reel/DfA026xAQVB/">Instagram</a></sub></p></td>
+<td width="33%" valign="top"><a href="https://github.com/omoresearch/omo-microduck/releases/download/v1.0.0/microduck-reel-batcave.mp4"><img src="docs/media/reel-batcave.webp" alt="Reel: down through a hidden cave into the white lab, where the Microduck walks up to the camera"></a>
+<p><sub><b>Down through the cave.</b><br>Nobody knows the lab is there. Drop through the cave, and the duck walks out to meet you.<br><a href="https://github.com/omoresearch/omo-microduck/releases/download/v1.0.0/microduck-reel-batcave.mp4">Full reel</a> · <a href="https://www.instagram.com/reel/DfA1AtICNx0/">Instagram</a></sub></p></td>
 </tr>
 </table>
 
@@ -89,6 +93,19 @@ they have a body, a place and a voice. Omo Microduck is that idea at duck scale.
 | **Chat-controlled** | `!duck walk`, `!duck follow`, `!duck zippy trick roulade`, `!ducks sit`. Commands are handled client-side and never sent to the server. |
 | **Stream-ready** | Twitch viewers can drive the duck through `"from":"twitch:<user>"` commands. They can walk it and trigger tricks; they cannot reset, spawn or remove ducks. |
 | **Talks back** *(optional)* | With Simple Voice Chat, hold push-to-talk and the duck you are looking at answers from its own body, in positional audio, with captions. |
+
+### The same brains, without Minecraft
+
+<table>
+<tr>
+<td width="50%"><img src="docs/media/duck-walk.gif" alt="The Microduck walking and turning in the bare MuJoCo sim, driven by Pollen's velstand policy"></td>
+<td width="50%"><img src="docs/media/duck-tricks.gif" alt="Community brains in the bare MuJoCo sim: forward roll, hop and dance"></td>
+</tr>
+<tr>
+<td align="center"><sub><b>It walks because it learned to.</b> Pollen's <code>velstand</code> policy, 50 times a second.</sub></td>
+<td align="center"><sub><b>And it learns new tricks.</b> Rolls, hops, dances: community brains from Hugging Face.</sub></td>
+</tr>
+</table>
 
 <p align="center">
   <img src="docs/media/render-trio.png" alt="The in-game Microduck model: three-quarter view, side view and head close-up" width="90%">

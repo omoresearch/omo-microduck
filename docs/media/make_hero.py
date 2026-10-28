@@ -1,14 +1,16 @@
-"""Compose docs/media/hero.png from the real MuJoCo render (still-hero.png).
+"""Compose the README hero (light + dark) from a real in-game frame.
 
-The duck is the offscreen render of the actual Pollen Microduck model; this
-script only crops it, warms it into the omo.sh palette and sets the type.
+The picture is reel-lab-still.jpg: an unedited frame of the Microduck flock in
+the Omo Space duck lab, taken from the stream recording behind the "secret lab"
+reel, cropped clear of the face cam, chat, hotbar and held item, with the
+crosshair removed. This script only frames it and sets the type.
 Fonts: Crimson Text + IBM Plex Mono (SIL OFL). Run from the repo root:
-    python3 docs/media/make_hero.py [path/to/fonts] [path/to/omo-mark.png]
+    python3 docs/media/make_hero.py path/to/fonts [path/to/omo-mark.png]
 """
 import sys
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont, ImageChops
+from PIL import Image, ImageDraw, ImageFont
 
 HERE = Path(__file__).resolve().parent
 FONTS = Path(sys.argv[1]) if len(sys.argv) > 1 else HERE / "fonts"
@@ -22,75 +24,81 @@ SAND = (196, 184, 168)
 ORANGE = (226, 104, 36)
 
 W, H = 2400, 960
+PAD = 48
+THEMES = {
+    "light": dict(bg=CREAM, fg=INK, sub=BROWN, pill_bg=INK, pill_fg=CREAM, frame=LINE),
+    "dark": dict(bg=(18, 12, 7), fg=CREAM, sub=SAND, pill_bg=CREAM, pill_fg=INK, frame=BROWN),
+}
 
 
 def font(name, size):
     return ImageFont.truetype(str(FONTS / name), size)
 
 
-def main():
-    img = Image.new("RGB", (W, H), CREAM)
+def smooth(t):
+    return t * t * (3 - 2 * t)
 
-    # Real render: crop around the duck and fit it to the right 56 % of the banner.
-    src = Image.open(HERE / "still-hero.png").convert("RGB")
-    crop = src.crop((250, 20, 1110, 720))  # 860 x 700
-    rh = H
-    rw = round(crop.width * rh / crop.height)
-    duck = crop.resize((rw, rh), Image.LANCZOS)
-    # Warm the cool studio sky/floor towards the cream paper (multiply-ish tint).
-    warm = Image.new("RGB", duck.size, (255, 246, 232))
-    duck = ImageChops.multiply(duck, warm)
-    duck = Image.blend(duck, Image.new("RGB", duck.size, CREAM), 0.10)
 
-    x0 = W - rw
-    # Horizontal fade into the paper on the left edge of the render.
-    mask = Image.new("L", duck.size, 255)
-    md = ImageDraw.Draw(mask)
-    fade = 420
-    for x in range(fade):
-        t = x / fade
-        md.line([(x, 0), (x, rh)], fill=round(255 * (t * t * (3 - 2 * t))))
-    img.paste(duck, (x0, 0), mask)
+def build(theme):
+    c = THEMES[theme]
+    img = Image.new("RGB", (W, H), c["bg"])
+
+    # Real in-game frame as a tall photo plate on the right.
+    src = Image.open(HERE / "reel-lab-still.jpg").convert("RGB")
+    ph = H - 2 * PAD
+    pw = round(src.width * ph / src.height)
+    shot = src.resize((pw, ph), Image.LANCZOS)
+    px, py = W - PAD - pw, PAD
+    mask = Image.new("L", (pw, ph), 0)
+    ImageDraw.Draw(mask).rounded_rectangle((0, 0, pw - 1, ph - 1), radius=28, fill=255)
+    img.paste(shot, (px, py), mask)
 
     d = ImageDraw.Draw(img)
-    lx = 150
+    d.rounded_rectangle((px - 1, py - 1, px + pw, py + ph), radius=29, outline=c["frame"], width=3)
 
-    # Eyebrow pill.
-    eb = font("IBMPlexMono-Medium.ttf", 34)
+    # Small honest caption on the photo itself.
+    cap = "IN-GAME  ·  FROM THE STREAM"
+    cf = font("IBMPlexMono-Medium.ttf", 22)
+    cw = d.textlength(cap, font=cf)
+    cx, cy = px + 28, py + 28
+    d.rounded_rectangle((cx, cy, cx + cw + 40, cy + 44), radius=22, fill=INK)
+    d.text((cx + 20, cy + 8), cap, font=cf, fill=CREAM)
+    lx = 140
+
+    eb = font("IBMPlexMono-Medium.ttf", 32)
     label = "OMO RESEARCH  ·  MICRODUCK"
     tw = d.textlength(label, font=eb)
-    d.rounded_rectangle((lx - 4, 168, lx + tw + 44, 228), radius=30, fill=INK)
-    d.text((lx + 20, 178), label, font=eb, fill=CREAM)
+    d.rounded_rectangle((lx - 4, 150, lx + tw + 44, 208), radius=29, fill=c["pill_bg"])
+    d.text((lx + 20, 159), label, font=eb, fill=c["pill_fg"])
 
-    serif = font("CrimsonText-SemiBold.ttf", 132)
-    d.text((lx, 262), "A real robot duck,", font=serif, fill=INK)
-    d.text((lx, 400), "alive in Minecraft.", font=serif, fill=INK)
+    serif = font("CrimsonText-SemiBold.ttf", 146)
+    d.text((lx, 248), "A real robot duck,", font=serif, fill=c["fg"])
+    d.text((lx, 410), "alive in Minecraft.", font=serif, fill=c["fg"])
+    d.text((lx, 590), "Real CAD. Real servos. A real RL brain, simulated live.",
+           font=font("CrimsonText-Italic.ttf", 56), fill=c["sub"])
 
-    d.text((lx, 566), "Real CAD. Real servos. A real RL brain, simulated live.",
-           font=font("CrimsonText-Italic.ttf", 54), fill=BROWN)
+    d.rectangle((lx, 694, lx + 120, 699), fill=ORANGE)
+    d.text((lx, 726), "MuJoCo  ·  Pollen Robotics policies  ·  Fabric 26.2",
+           font=font("IBMPlexMono-Regular.ttf", 33), fill=c["fg"])
 
-    d.rectangle((lx, 668, lx + 120, 673), fill=ORANGE)
-    mono = font("IBMPlexMono-Regular.ttf", 34)
-    d.text((lx, 702), "MuJoCo  ·  Pollen Robotics policies  ·  Fabric 26.2",
-           font=mono, fill=INK)
-
-    # Footer mark + url.
-    fy = 840
+    fy = 852
+    tx = lx
     if MARK and MARK.exists():
-        m = Image.open(MARK).convert("RGBA").resize((64, 64), Image.LANCZOS)
-        img.paste(m, (lx, fy - 14), m)
-        tx = lx + 84
-    else:
-        tx = lx
-    d.text((tx, fy), "omo.sh", font=font("IBMPlexMono-Medium.ttf", 32), fill=BROWN)
+        m = Image.open(MARK).convert("RGBA").resize((60, 60), Image.LANCZOS)
+        if theme == "dark":  # recolour the mark to cream, keep its alpha
+            a = m.split()[3]
+            m = Image.merge("RGBA", (*Image.new("RGB", m.size, CREAM).split(), a))
+        img.paste(m, (lx, fy - 12), m)
+        tx = lx + 80
+    d.text((tx, fy), "omo.sh", font=font("IBMPlexMono-Medium.ttf", 30), fill=c["sub"])
 
-    # Thin paper frame.
-    d.rectangle((0, 0, W - 1, H - 1), outline=LINE, width=4)
-
-    out = img.resize((W // 3 * 2, H // 3 * 2), Image.LANCZOS)  # 1600 x 640
-    out.save(HERE / "hero.png", optimize=True)
-    print("wrote", HERE / "hero.png", out.size)
+    d.rectangle((0, 0, W - 1, H - 1), outline=c["frame"], width=4)
+    out = img.resize((1600, 640), Image.LANCZOS)
+    name = "hero.png" if theme == "light" else "hero-dark.png"
+    out.save(HERE / name, optimize=True)
+    print("wrote", HERE / name, out.size)
 
 
 if __name__ == "__main__":
-    main()
+    for t in THEMES:
+        build(t)
