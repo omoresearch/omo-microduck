@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <sub>⭐ <b>Star the repo to follow the flock.</b> &nbsp;·&nbsp; <a href="#quick-start">Quick start</a> &nbsp;·&nbsp; <a href="#how-it-works">How it works</a> &nbsp;·&nbsp; <a href="https://www.omo.sh">omo.sh</a></sub>
+  <sub>⭐ <b>Star the repo to follow the flock.</b> &nbsp;·&nbsp; <a href="#quick-start-with-your-agent">Quick start with your agent</a> &nbsp;·&nbsp; <a href="#quick-start">Quick start</a> &nbsp;·&nbsp; <a href="#how-it-works">How it works</a> &nbsp;·&nbsp; <a href="https://www.omo.sh">omo.sh</a></sub>
 </p>
 
 <p align="center">
@@ -114,6 +114,27 @@ they have a body, a place and a voice. Omo Microduck is that idea at duck scale.
   <img src="docs/media/render-trio.png" alt="The in-game Microduck model: three-quarter view, side view and head close-up" width="90%">
   <br><sub>The in-game model: the real CAD, decimated to 25.5k triangles with baked AO.</sub>
 </p>
+
+## Quick start with your agent
+
+Let your coding agent install the duck for you. Paste this into **Claude Code**, **Codex** or **Hermes**, opened in an empty folder. It installs
+everything from this repository, stops whenever you need to sign in or decide something, and never signs in for you.
+
+```text
+Set up Omo Microduck for me from https://github.com/omoresearch/omo-microduck
+
+1. Read README.md. First check that I have Minecraft Java 26.2 with Fabric Loader and Fabric API, Python 3.12+ and git, and tell me what is missing.
+2. Follow its Quick start: clone the repo, run sidecar/setup.sh, start the sidecar, and put the jar from the latest release into my Fabric 26.2 instance's mods folder.
+3. When the game is running, tell me exactly what to type in chat for this: Ask me what I want the duck to do first, then give me the chat commands for it.
+```
+
+To skip the question, replace the text after `for this:` with your own idea. For example:
+
+- **A duck that follows me:** `put one duck at my feet and have it follow me`
+- **The whole flock:** `bring the whole flock and make them all walk`
+- **Tricks:** `show me the tricks it knows and make it do a forward roll`
+
+There is also a version with buttons to pick from on [omo.sh](https://www.omo.sh/research/robots#agent-quick-start).
 
 ## Quick start
 
