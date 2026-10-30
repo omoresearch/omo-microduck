@@ -29,13 +29,13 @@ if command -v uv >/dev/null 2>&1; then
   uv pip install -q --python .venv/bin/python -r requirements.txt
   # BAM pins python<3.13 but is pure numpy
   uv pip install -q --python .venv/bin/python --no-deps \
-    "better-actuator-models @ https://github.com/Rhoban/bam/archive/refs/heads/mjlab_frictionloss.tar.gz"
+    "better-actuator-models @ https://github.com/Rhoban/bam/archive/57d13ead53206a6bf0db3d66f86506ae8c2ce01a.tar.gz"
 else
   [ -d .venv ] || "$PY" -m venv .venv
   say "installing requirements (pip)"
   .venv/bin/pip install -q -r requirements.txt
   .venv/bin/pip install -q --no-deps --ignore-requires-python \
-    "https://github.com/Rhoban/bam/archive/refs/heads/mjlab_frictionloss.tar.gz"
+    "https://github.com/Rhoban/bam/archive/57d13ead53206a6bf0db3d66f86506ae8c2ce01a.tar.gz"
 fi
 
 # 3. Community brains (~28 MB) --------------------------------------------------------------------

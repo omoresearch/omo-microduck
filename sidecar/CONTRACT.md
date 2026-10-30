@@ -13,6 +13,8 @@ sidecar, and a Fabric client mod renders it, articulated, in your Minecraft worl
 | Twitch hook (optional) | any chat bot that POSTs `/cmd` with `"from":"twitch:<user>"` |
 
 ## Sidecar HTTP API — 127.0.0.1:8796 only (never 0.0.0.0), JSON, no auth (localhost only)
+
+Requests that carry an `Origin` header (any web page, including the in-game web walls) or a `Host` other than `127.0.0.1` / `localhost` / `[::1]` (DNS rebinding) get `403`, so only local programs can drive the sim.
 Sim frame: MuJoCo world, z-up, metres, floor plane at z=0. Quaternions are [w,x,y,z].
 
 - `GET /health` -> `{"ok":true,"mode":"stand","fallen":false,"t":12.3,"policy":"velstand.onnx","hz":50}`
