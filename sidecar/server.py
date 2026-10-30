@@ -29,6 +29,23 @@ import brains  # noqa: E402  (community brains: hot-swappable policies, see brai
 import multi  # noqa: E402  (several ducks: Fleet, personas, roster)
 
 HOST = "127.0.0.1"
+
+
+LOOPBACK_NAMES = ("127.0.0.1", "localhost", "::1")
+
+
+def foreign_request(headers):
+    """Why a request must be refused, or None. Only local programs (the mod, the tools) may drive the
+    sim: a web page in any browser on this machine, including the in-game web walls, can also reach
+    127.0.0.1. Browsers always send Origin on cross-site POSTs, and a DNS-rebinding page carries its
+    own host name in Host; the mod and the Python tools send neither."""
+    if headers.get("Origin"):
+        return "requests from web pages are refused"
+    host = (headers.get("Host") or "").strip()
+    name = host[1:host.index("]")] if host.startswith("[") and "]" in host else host.rsplit(":", 1)[0]
+    if name.lower() not in LOOPBACK_NAMES:
+        return "only 127.0.0.1 / localhost may be used as the Host"
+    return None
 PORT = 8796
 TWITCH_ALLOWED = {"walk", "stop", "sit", "stand", "follow", "quack", "turn", "brain", "trick"}
 POLICY_FILES = {"velstand": "velstand.onnx", "sitstand": "alpha_sitstand.onnx"}
@@ -211,6 +228,9 @@ class Handler(BaseHTTPRequestHandler):
         return obj
 
     def do_GET(self):
+        why = foreign_request(self.headers)
+        if why:
+            return self._send(403, {"ok": False, "error": why})
         u = urllib.parse.urlsplit(self.path)
         path, qs = u.path, urllib.parse.parse_qs(u.query)
         if path == "/health":
@@ -236,6 +256,9 @@ class Handler(BaseHTTPRequestHandler):
         return self._send(404, {"ok": False, "error": "not found"})
 
     def do_DELETE(self):
+        why = foreign_request(self.headers)
+        if why:
+            return self._send(403, {"ok": False, "error": why})
         path = urllib.parse.urlsplit(self.path).path
         if path.startswith("/ducks/"):
             sel = urllib.parse.unquote(path[len("/ducks/"):])
@@ -254,6 +277,9 @@ class Handler(BaseHTTPRequestHandler):
         return self._send(200, {"ok": True, "removed": removed, "ducks": len(SERVICE.fleet.ducks)})
 
     def do_POST(self):
+        why = foreign_request(self.headers)
+        if why:
+            return self._send(403, {"ok": False, "error": why})
         path = urllib.parse.urlsplit(self.path).path
         try:
             body = self._json_body(4 << 20 if path == "/terrain" else 65536)
